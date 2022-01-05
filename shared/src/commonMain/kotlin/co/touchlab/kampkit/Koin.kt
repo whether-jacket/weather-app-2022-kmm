@@ -2,6 +2,9 @@ package co.touchlab.kampkit
 
 import co.touchlab.kampkit.ktor.DogApiImpl
 import co.touchlab.kampkit.ktor.KtorApi
+import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
+import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
+import co.touchlab.kampkit.metaweather.repo.WeatherRepo
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
@@ -52,9 +55,14 @@ private val coreModule = module {
             getWith("DogApiImpl")
         )
     }
+    single<MetaWeatherApi>{
+        MetaWeatherApiImpl()
+    }
     single<Clock> {
         Clock.System
     }
+
+    single<WeatherRepo>{ WeatherRepo()}
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,

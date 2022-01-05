@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         android:name="co.touchlab.kampkit.android.MainApp">
         <activity
-            android:name="co.touchlab.kampkit.android.MainActivity"
+            android:name="co.touchlab.kampkit.android.metaweather.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

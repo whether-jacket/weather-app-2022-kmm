@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
@@ -31,7 +30,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.flowWithLifecycle
-import co.touchlab.kampkit.android.BreedViewModel
+import co.touchlab.kampkit.android.kamp.BreedViewModel
 import co.touchlab.kampkit.android.R
 import co.touchlab.kampkit.db.Breed
 import co.touchlab.kampkit.models.DataState
@@ -134,8 +133,8 @@ fun Success(
 @Composable
 fun DogList(breeds: List<Breed>, onItemClick: (Breed) -> Unit) {
     LazyColumn {
-        items(breeds) { breed ->
-            DogRow(breed) {
+        items(breeds.size) { breed ->
+            DogRow(breeds[breed]) {
                 onItemClick(it)
             }
             Divider()
