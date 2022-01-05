@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android
+package co.touchlab.kampkit.android.kamp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

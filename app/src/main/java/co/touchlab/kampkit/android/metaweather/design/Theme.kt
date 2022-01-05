@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.ui.theme
+package co.touchlab.kampkit.android.metaweather.design
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
