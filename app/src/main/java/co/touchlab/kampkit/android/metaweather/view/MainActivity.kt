@@ -1,15 +1,17 @@
 package co.touchlab.kampkit.android.metaweather.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.produceState
-import androidx.lifecycle.Observer
-import co.touchlab.kampkit.android.metaweather.design.KaMPKitTheme
+import co.touchlab.kampkit.android.metaweather.States
+import co.touchlab.kampkit.android.metaweather.view.screens.LoadingScreen
+import co.touchlab.kampkit.android.metaweather.view.screens.WeatherReportView
 import co.touchlab.kampkit.android.metaweather.viewmodel.ViewModel
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
 import org.koin.core.component.KoinComponent
+import org.orbitmvi.orbit.viewmodel.observe
 
 class MainActivity : ComponentActivity(), KoinComponent {
 
@@ -20,24 +22,25 @@ class MainActivity : ComponentActivity(), KoinComponent {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val viewStateObserver = Observer<ViewState> { viewState ->
-            setNewViewState(viewState)
-        }
-        viewModel.viewStateLiveData.observe(this, viewStateObserver)
-        setContent {
-            KaMPKitTheme {
-
-            }
-        }
-        viewModel.startApp()
+        viewModel.observe(state = ::render, sideEffect = ::handleSideEffect, lifecycleOwner = this@MainActivity)
+        viewModel.startMakingApiCall()
     }
 
-    private fun setNewViewState(viewState: ViewState) {
+    private fun render(viewState: ViewState) {
         setContent {
-            if (viewState.isLoadingNetworkRequest){
+            if (viewState.state == States.IN_PROGRESS) {
                 LoadingScreen()
-            }else{
+            } else {
                 WeatherReportView(weatherStats = viewState.weatherStats)
+            }
+        }
+    }
+
+    private fun handleSideEffect(sideEffect: ViewSideEffects) {
+        Log.i(MainActivity::class.toString(), sideEffect.text)
+        if (sideEffect.state == States.IN_PROGRESS) {
+            setContent {
+                LoadingScreen()
             }
         }
     }

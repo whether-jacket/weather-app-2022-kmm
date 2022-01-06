@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.metaweather.view
+package co.touchlab.kampkit.android.metaweather.view.screens
 
 import android.text.Layout
 import androidx.compose.foundation.layout.Arrangement
