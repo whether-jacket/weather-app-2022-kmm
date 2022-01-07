@@ -21,19 +21,16 @@ import org.orbitmvi.orbit.viewmodel.container
 class ViewModel : ContainerHost<ViewState, ViewSideEffects>, ViewModel(), KoinComponent {
 
     override val container: Container<ViewState, ViewSideEffects> = container(ViewState())
-
     private val weatherRepo: WeatherRepo = WeatherRepo()
-
     private var viewState = ViewState()
-    // val viewState: LiveData<ViewState> = container.stateFlow.asLiveData()
 
     fun startMakingApiCall() = intent {
         postSideEffect(
-            ViewSideEffects("Starting API call", States.IN_PROGRESS)
+            ViewSideEffects("Starting API call")
         )
-        // reduce {
-        //     ViewState(state = States.IN_PROGRESS)
-        // }
+        reduce {
+            ViewState(state = States.IN_PROGRESS)
+        }
         loadWeatherReport()
     }
 
@@ -41,9 +38,9 @@ class ViewModel : ContainerHost<ViewState, ViewSideEffects>, ViewModel(), KoinCo
         postSideEffect(
             ViewSideEffects(
                 text = "Making a Network call",
-                state = States.IN_PROGRESS
             )
         )
+
         viewModelScope.launch {
             val weatherReport = weatherRepo.getWeather()
             val newViewState = viewState.copy(

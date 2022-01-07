@@ -38,10 +38,5 @@ class MainActivity : ComponentActivity(), KoinComponent {
 
     private fun handleSideEffect(sideEffect: ViewSideEffects) {
         Log.i(MainActivity::class.toString(), sideEffect.text)
-        if (sideEffect.state == States.IN_PROGRESS) {
-            setContent {
-                LoadingScreen()
-            }
-        }
     }
 }

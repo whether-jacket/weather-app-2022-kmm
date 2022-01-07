@@ -4,5 +4,4 @@ import co.touchlab.kampkit.android.metaweather.States
 
 data class ViewSideEffects(
     val text: String = "",
-    val state: States = States.FINISHED
 )
