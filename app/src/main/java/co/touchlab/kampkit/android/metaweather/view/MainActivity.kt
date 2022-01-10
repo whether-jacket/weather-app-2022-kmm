@@ -11,18 +11,21 @@ import co.touchlab.kampkit.android.metaweather.viewmodel.ViewModel
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
 import org.koin.core.component.KoinComponent
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.orbitmvi.orbit.viewmodel.observe
 
 class MainActivity : ComponentActivity(), KoinComponent {
 
     private val log: Logger by injectLogger("MainActivity")
-    private val viewModel: ViewModel by lazy {
-        ViewModel()
-    }
+    private val viewModel: ViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.observe(state = ::render, sideEffect = ::handleSideEffect, lifecycleOwner = this@MainActivity)
+        viewModel.observe(
+            state = ::render,
+            sideEffect = ::handleSideEffect,
+            lifecycleOwner = this@MainActivity
+        )
         viewModel.startMakingApiCall()
     }
 
@@ -31,7 +34,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
             if (viewState.state == States.IN_PROGRESS) {
                 LoadingScreen()
             } else {
-                WeatherReportView(weatherStats = viewState.weatherStats)
+                WeatherReportView(weatherReport = viewState.weatherReport, errorMessage = viewState.errorMessage)
             }
         }
     }

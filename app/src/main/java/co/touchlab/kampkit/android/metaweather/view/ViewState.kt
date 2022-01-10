@@ -1,9 +1,10 @@
 package co.touchlab.kampkit.android.metaweather.view
 
 import co.touchlab.kampkit.android.metaweather.States
-import co.touchlab.kampkit.android.metaweather.model.WeatherStats
+import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
 data class ViewState(
-    val weatherStats: WeatherStats = WeatherStats(),
+    val weatherReport: WeatherReport = WeatherReport(),
+    val errorMessage: String = "",
     val state: States = States.FINISHED
 )

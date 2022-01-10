@@ -16,16 +16,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import co.touchlab.kampkit.android.metaweather.model.WeatherStats
+import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
 @Composable
-fun WeatherReportView(weatherStats: WeatherStats) {
+fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
     Column(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = weatherStats.cityTitle,
+            text = weatherReport.cityTitle,
             color = Color.Black,
             fontSize = 50.sp,
             fontWeight = FontWeight.Bold,
@@ -33,7 +33,7 @@ fun WeatherReportView(weatherStats: WeatherStats) {
             modifier = Modifier.padding(8.dp)
         )
         Text(
-            text = weatherStats.countryTitle,
+            text = weatherReport.countryTitle,
             color = Color.Black,
             fontSize = 30.sp,
             textAlign = TextAlign.Center,
@@ -47,19 +47,19 @@ fun WeatherReportView(weatherStats: WeatherStats) {
                 horizontalArrangement = Arrangement.Start
             ) {
                 Text(
-                    text = weatherStats.temperature,
+                    text = weatherReport.temperature,
                     color = Color.DarkGray,
                     fontSize = 30.sp,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(8.dp, top = 16.dp)
                 )
             }
-            Spacer(modifier = Modifier.padding(start = 10.dp, end = 150.dp))
+            Spacer(modifier = Modifier.padding(start = 10.dp, end = 75.dp))
             Row(
                 horizontalArrangement = Arrangement.End
             ) {
                 Text(
-                    text = "Humidity\n${weatherStats.humidity}",
+                    text = weatherReport.humidity,
                     color = Color.DarkGray,
                     fontSize = 30.sp,
                     textAlign = TextAlign.Center,
@@ -74,7 +74,7 @@ fun WeatherReportView(weatherStats: WeatherStats) {
                 horizontalArrangement = Arrangement.Start
             ) {
                 Text(
-                    text = "Wind Speed\n${weatherStats.windSpeed}",
+                    text = weatherReport.windSpeed,
                     color = Color.DarkGray,
                     fontSize = 30.sp,
                     textAlign = TextAlign.Center,
@@ -86,7 +86,7 @@ fun WeatherReportView(weatherStats: WeatherStats) {
                 horizontalArrangement = Arrangement.End
             ) {
                 Text(
-                    text = "Air Pressure\n${weatherStats.airPressure}",
+                    text = weatherReport.airPressure,
                     color = Color.DarkGray,
                     fontSize = 30.sp,
                     textAlign = TextAlign.Center,
@@ -94,5 +94,12 @@ fun WeatherReportView(weatherStats: WeatherStats) {
                 )
             }
         }
+        Text(
+            text = errorMessage,
+            color = Color.DarkGray,
+            fontSize = 30.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(8.dp)
+        )
     }
 }

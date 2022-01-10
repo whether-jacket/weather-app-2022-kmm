@@ -5,6 +5,7 @@ import co.touchlab.kampkit.ktor.KtorApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
+import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
@@ -55,20 +56,21 @@ private val coreModule = module {
             getWith("DogApiImpl")
         )
     }
-    single<MetaWeatherApi>{
+    single<MetaWeatherApi> {
         MetaWeatherApiImpl()
     }
     single<Clock> {
         Clock.System
     }
-
-    single<WeatherRepo>{ WeatherRepo()}
+    factory<WeatherRepo> { WeatherRepo() }
+    factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,
     // that would likely go into platformModule expect/actual.
     // See https://github.com/touchlab/Kermit
-    val baseLogger = Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
+    val baseLogger =
+        Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
 }
 

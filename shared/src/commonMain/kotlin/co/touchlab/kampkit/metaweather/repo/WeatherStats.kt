@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.metaweather.model
+package co.touchlab.kampkit.metaweather.repo
 
 data class WeatherStats(
     val temperature: String = "",
