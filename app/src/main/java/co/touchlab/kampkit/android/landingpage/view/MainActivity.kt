@@ -1,13 +1,12 @@
-package co.touchlab.kampkit.android.metaweather.view
+package co.touchlab.kampkit.android.landingpage.view
 
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import co.touchlab.kampkit.android.metaweather.States
-import co.touchlab.kampkit.android.metaweather.view.screens.LoadingScreen
-import co.touchlab.kampkit.android.metaweather.view.screens.WeatherReportView
-import co.touchlab.kampkit.android.metaweather.viewmodel.ViewModel
+import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
+import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
+import co.touchlab.kampkit.android.landingpage.viewmodel.ViewModel
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
 import org.koin.core.component.KoinComponent
@@ -31,7 +30,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
 
     private fun render(viewState: ViewState) {
         setContent {
-            if (viewState.state == States.IN_PROGRESS) {
+            if (viewState.isInProgress) {
                 LoadingScreen()
             } else {
                 WeatherReportView(weatherReport = viewState.weatherReport, errorMessage = viewState.errorMessage)
@@ -39,7 +38,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
         }
     }
 
-    private fun handleSideEffect(sideEffect: ViewSideEffects) {
-        Log.i(MainActivity::class.toString(), sideEffect.text)
+    private fun handleSideEffect(text: String) {
+        Log.i(MainActivity::class.toString(), text)
     }
 }

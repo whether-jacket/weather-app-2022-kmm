@@ -32,7 +32,7 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
             is RedirectResponseException -> t.response.status
             is ClientRequestException -> t.response.status
             is ServerResponseException -> t.response.status
-            else -> HttpStatusCode(400, "UNKNOWN")
+            else -> HttpStatusCode(400, "${t.message}\n${t.cause}")
         }
 
     private fun roundFloatToTwoDecimalPlaces(float: Float): String {
