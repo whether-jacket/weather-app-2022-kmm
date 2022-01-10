@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.landingpage.design
+package co.touchlab.kampkit.android.design
 
 import androidx.compose.ui.graphics.Color
 
