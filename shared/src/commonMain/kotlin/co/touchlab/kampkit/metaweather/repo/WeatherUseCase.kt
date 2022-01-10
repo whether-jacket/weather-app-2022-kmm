@@ -37,15 +37,4 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
         val weatherInt = (float * 100).toInt()
         return ((weatherInt).toDouble() / 100).toString()
     }
-
-    private suspend fun dinky() {
-        when (val weatherReport = getWeatherReport()) {
-            is Response.Success -> {
-                weatherReport.data
-            }
-            is Response.Failure -> {
-                weatherReport.message
-            }
-        }
-    }
 }
