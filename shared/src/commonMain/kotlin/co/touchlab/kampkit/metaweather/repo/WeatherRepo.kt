@@ -3,10 +3,8 @@ package co.touchlab.kampkit.metaweather.repo
 import org.koin.core.component.inject
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
-import co.touchlab.kampkit.metaweather.ktor.Response
 import co.touchlab.kampkit.metaweather.model.WeatherForLocation
 import co.touchlab.kermit.Logger
-import io.ktor.client.statement.HttpResponse
 import org.koin.core.component.KoinComponent
 
 class WeatherRepo : KoinComponent {
