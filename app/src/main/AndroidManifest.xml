@@ -15,7 +15,7 @@
         android:name="co.touchlab.kampkit.android.MainApp"
         tools:targetApi="m">
         <activity
-            android:name="co.touchlab.kampkit.android.landingpage.view.MainActivity"
+            android:name="co.touchlab.kampkit.android.landingpage.view.LandingPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

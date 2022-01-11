@@ -6,6 +6,7 @@ import io.ktor.client.features.RedirectResponseException
 import io.ktor.client.features.ResponseException
 import io.ktor.client.features.ServerResponseException
 import io.ktor.http.HttpStatusCode
+import kotlin.math.floor
 
 class WeatherUseCase(private val weatherRepo: WeatherRepo) {
     suspend fun getWeatherReport(): Response<WeatherReport> {
@@ -15,9 +16,9 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
                 cityTitle = response.cityTitle,
                 countryTitle = response.parentRegion.title,
                 temperature = "Temperature\n${response.consolidatedWeather[0].theTemp} F",
-                humidity = "Humidity\n${roundFloatToTwoDecimalPlaces(response.consolidatedWeather[0].humidity)}",
-                windSpeed = "Wind Speed\n${roundFloatToTwoDecimalPlaces(response.consolidatedWeather[0].windSpeed)}",
-                airPressure = "Air Pressure\n${roundFloatToTwoDecimalPlaces(response.consolidatedWeather[0].airPressure)}"
+                humidity = "Humidity\n${floor(response.consolidatedWeather[0].humidity).toInt()}",
+                windSpeed = "Wind Speed\n${floor(response.consolidatedWeather[0].windSpeed).toInt()}",
+                airPressure = "Air Pressure\n${floor(response.consolidatedWeather[0].airPressure).toInt()}"
             )
             Response.Success(weatherReport)
         } catch (t: Throwable) {
@@ -34,9 +35,4 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
             is ServerResponseException -> t.response.status
             else -> HttpStatusCode(400, "${t.message}\n${t.cause}")
         }
-
-    private fun roundFloatToTwoDecimalPlaces(float: Float): String {
-        val weatherInt = (float * 100).toInt()
-        return ((weatherInt).toDouble() / 100).toString()
-    }
 }

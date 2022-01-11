@@ -77,7 +77,6 @@ object TextSize {
 }
 
 object LetterSpacing {
-    //Letter Spacings
     const val xxs = -0.12
     const val xs = -0.09
     const val s = -0.05

@@ -13,9 +13,9 @@ import org.koin.core.component.KoinComponent
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.orbitmvi.orbit.viewmodel.observe
 
-class MainActivity : ComponentActivity(), KoinComponent {
+class LandingPageActivity : ComponentActivity(), KoinComponent {
 
-    private val log: Logger by injectLogger("MainActivity")
+    private val log: Logger by injectLogger(LandingPageActivity::class.toString())
     private val viewModel: ViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity(), KoinComponent {
         viewModel.observe(
             state = ::render,
             sideEffect = ::handleSideEffect,
-            lifecycleOwner = this@MainActivity
+            lifecycleOwner = this@LandingPageActivity
         )
         viewModel.startMakingApiCall()
     }
@@ -39,6 +39,6 @@ class MainActivity : ComponentActivity(), KoinComponent {
     }
 
     private fun handleSideEffect(text: String) {
-        Log.i(MainActivity::class.toString(), text)
+        log.i(text)
     }
 }
