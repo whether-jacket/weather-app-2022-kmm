@@ -13,10 +13,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import co.touchlab.kampkit.android.design.Spacing
+import co.touchlab.kampkit.android.design.TextSize
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
 @Composable
@@ -29,43 +32,54 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
             Text(
                 text = weatherReport.cityTitle,
                 color = Color.Black,
-                fontSize = 50.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(8.dp),
+                style = (MaterialTheme.typography).body1
+                    .merge(TextStyle(fontSize = TextSize.xxxl)),
+                modifier = Modifier
+                    .padding(start = Spacing.HorizontalSpacing.m)
+                    .fillMaxWidth()
             )
             Text(
                 text = weatherReport.countryTitle,
                 color = Color.Black,
-                fontSize = 30.sp,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(8.dp)
+                style = (MaterialTheme.typography).body1
+                    .merge(TextStyle(fontSize = TextSize.xxl)),
+                modifier = Modifier
+                    .padding(start = Spacing.HorizontalSpacing.m)
+                    .fillMaxWidth()
             )
             Divider(modifier = Modifier.padding(8.dp))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-            ) {
+            Row {
                 Row(
                     horizontalArrangement = Arrangement.Start
                 ) {
                     Text(
                         text = weatherReport.temperature,
                         color = Color.DarkGray,
-                        fontSize = 30.sp,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(8.dp, top = 16.dp),
+                        style = (MaterialTheme.typography).body1
+                            .merge(TextStyle(fontSize = TextSize.xxl)),
+                        modifier = Modifier
+                            .padding(
+                                start = Spacing.HorizontalSpacing.m,
+                                end = Spacing.HorizontalSpacing.m
+                            )
                     )
                 }
-                Spacer(modifier = Modifier.padding(start = 10.dp, end = 75.dp))
-                Row(
-                    horizontalArrangement = Arrangement.End
-                ) {
+                Row {
                     Text(
                         text = weatherReport.humidity,
                         color = Color.DarkGray,
-                        fontSize = 30.sp,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(8.dp)
+                        style = (MaterialTheme.typography).body1
+                            .merge(TextStyle(fontSize = TextSize.xxl)),
+                        modifier = Modifier
+                            .padding(
+                                start = Spacing.HorizontalSpacing.m,
+                                end = Spacing.HorizontalSpacing.m
+                            )
                     )
                 }
             }
@@ -78,12 +92,16 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                     Text(
                         text = weatherReport.windSpeed,
                         color = Color.DarkGray,
-                        fontSize = 30.sp,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(8.dp, top = 16.dp)
+                        style = (MaterialTheme.typography).body1
+                            .merge(TextStyle(fontSize = TextSize.xxl)),
+                        modifier = Modifier
+                            .padding(
+                                start = Spacing.HorizontalSpacing.m,
+                                end = Spacing.HorizontalSpacing.m
+                            )
                     )
                 }
-                Spacer(modifier = Modifier.padding(start = 10.dp, end = 100.dp))
                 Row(
                     horizontalArrangement = Arrangement.End
                 ) {
@@ -92,7 +110,13 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         color = Color.DarkGray,
                         fontSize = 30.sp,
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(8.dp)
+                        style = (MaterialTheme.typography).body1
+                            .merge(TextStyle(fontSize = TextSize.xxl)),
+                        modifier = Modifier
+                            .padding(
+                                start = Spacing.HorizontalSpacing.m,
+                                end = Spacing.HorizontalSpacing.m
+                            )
                     )
                 }
             }
@@ -101,7 +125,10 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 color = Color.DarkGray,
                 fontSize = 30.sp,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(8.dp)
+                style = (MaterialTheme.typography).body1
+                    .merge(TextStyle(fontSize = TextSize.xxl)),
+                modifier = Modifier
+                    .padding(start = Spacing.HorizontalSpacing.m, end = Spacing.HorizontalSpacing.m)
             )
         }
     }
