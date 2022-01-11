@@ -3,7 +3,6 @@ package co.touchlab.kampkit.android.landingpage.view.screens
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Divider
@@ -12,14 +11,9 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import co.touchlab.kampkit.android.design.Spacing
-import co.touchlab.kampkit.android.design.TextSize
+import co.touchlab.kampkit.android.design.TextStyles
 import co.touchlab.kampkit.android.design.TextStyling
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
@@ -32,16 +26,16 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
         ) {
             Text(
                 text = weatherReport.cityTitle,
-                style = TextStyling.xxxl_size_header,
+                style = TextStyles.xxxl,
                 modifier = Modifier
-                    .padding(start = Spacing.HorizontalSpacing.m)
+                    .padding(start = Spacing.Horizontal.m)
                     .fillMaxWidth()
             )
             Text(
                 text = weatherReport.countryTitle,
-                style = TextStyling.xxl_size,
+                style = TextStyles.xxl,
                 modifier = Modifier
-                    .padding(start = Spacing.HorizontalSpacing.m)
+                    .padding(start = Spacing.Horizontal.m)
                     .fillMaxWidth()
             )
             Divider(modifier = Modifier.padding(8.dp))
@@ -51,22 +45,22 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 ) {
                     Text(
                         text = weatherReport.temperature,
-                        style = TextStyling.xxl_size,
+                        style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.HorizontalSpacing.m,
-                                end = Spacing.HorizontalSpacing.m
+                                start = Spacing.Horizontal.m,
+                                end = Spacing.Horizontal.m
                             )
                     )
                 }
                 Row {
                     Text(
                         text = weatherReport.humidity,
-                        style = TextStyling.xxl_size,
+                        style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.HorizontalSpacing.m,
-                                end = Spacing.HorizontalSpacing.m
+                                start = Spacing.Horizontal.m,
+                                end = Spacing.Horizontal.m
                             )
                     )
                 }
@@ -79,11 +73,11 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 ) {
                     Text(
                         text = weatherReport.windSpeed,
-                        style = TextStyling.xxl_size,
+                        style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.HorizontalSpacing.m,
-                                end = Spacing.HorizontalSpacing.m
+                                start = Spacing.Horizontal.m,
+                                end = Spacing.Horizontal.m
                             )
                     )
                 }
@@ -92,20 +86,20 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 ) {
                     Text(
                         text = weatherReport.airPressure,
-                        style = TextStyling.xxl_size,
+                        style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.HorizontalSpacing.m,
-                                end = Spacing.HorizontalSpacing.m
+                                start = Spacing.Horizontal.m,
+                                end = Spacing.Horizontal.m
                             )
                     )
                 }
             }
             Text(
                 text = errorMessage,
-                style = TextStyling.xxl_size,
+                style = TextStyles.xxl,
                 modifier = Modifier
-                    .padding(start = Spacing.HorizontalSpacing.m, end = Spacing.HorizontalSpacing.m)
+                    .padding(start = Spacing.Horizontal.m, end = Spacing.Horizontal.m)
             )
         }
     }
