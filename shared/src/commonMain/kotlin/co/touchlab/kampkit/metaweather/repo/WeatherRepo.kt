@@ -11,7 +11,7 @@ class WeatherRepo : KoinComponent {
     private val weatherApi: MetaWeatherApi by inject()
     private val log: Logger by injectLogger("WeatherRepo")
 
-    suspend fun getWeather(): WeatherForLocation {
+    suspend fun getWeather(): WeatherForLocation{
         return weatherApi.getWeatherFromApi()
     }
 }

@@ -9,7 +9,7 @@ import io.ktor.client.features.logging.LogLevel
 import io.ktor.client.features.logging.Logger
 import io.ktor.client.features.logging.Logging
 import io.ktor.client.request.get
-import io.ktor.http.ContentType.Application.Json
+import io.ktor.client.statement.HttpResponse
 import kotlinx.serialization.json.Json
 
 class MetaWeatherApiImpl : MetaWeatherApi {
@@ -27,7 +27,6 @@ class MetaWeatherApiImpl : MetaWeatherApi {
                     level = LogLevel.ALL
                 }
             }
-            level = LogLevel.INFO
         }
         install(HttpTimeout) {
             val timeout = 30000L

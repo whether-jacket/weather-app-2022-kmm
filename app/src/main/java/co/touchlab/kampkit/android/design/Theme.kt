@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.metaweather.design
+package co.touchlab.kampkit.android.design
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -40,7 +40,7 @@ fun KaMPKitTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = typography,
         shapes = Shapes,
         content = content
     )

@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.metaweather.design
+package co.touchlab.kampkit.android.design
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
