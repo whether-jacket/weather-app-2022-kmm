@@ -13,8 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import co.touchlab.kampkit.android.design.Spacing
-import co.touchlab.kampkit.android.design.TextStyles
-import co.touchlab.kampkit.android.design.TextStyling
+import co.touchlab.kampkit.android.design.styles.TextStyles
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
 @Composable
