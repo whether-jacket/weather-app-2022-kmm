@@ -34,10 +34,10 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 text = weatherReport.countryTitle,
                 style = TextStyles.xxl,
                 modifier = Modifier
-                    .padding(start = Spacing.Horizontal.m)
+                    .padding(start = Spacing.Surrounding.m)
                     .fillMaxWidth()
             )
-            Divider(modifier = Modifier.padding(8.dp))
+            Divider(modifier = Modifier.padding(Spacing.Surrounding.s))
             Row {
                 Row(
                     horizontalArrangement = Arrangement.Start
@@ -47,8 +47,8 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.Horizontal.m,
-                                end = Spacing.Horizontal.m
+                                start = Spacing.Surrounding.m,
+                                end = Spacing.Surrounding.m
                             )
                     )
                 }
@@ -58,8 +58,8 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.Horizontal.m,
-                                end = Spacing.Horizontal.m
+                                start = Spacing.Surrounding.m,
+                                end = Spacing.Surrounding.m
                             )
                     )
                 }
@@ -75,8 +75,8 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.Horizontal.m,
-                                end = Spacing.Horizontal.m
+                                start = Spacing.Surrounding.m,
+                                end = Spacing.Surrounding.m
                             )
                     )
                 }
@@ -88,8 +88,8 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         style = TextStyles.xxl,
                         modifier = Modifier
                             .padding(
-                                start = Spacing.Horizontal.m,
-                                end = Spacing.Horizontal.m
+                                start = Spacing.Surrounding.m,
+                                end = Spacing.Surrounding.m
                             )
                     )
                 }
@@ -98,7 +98,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                 text = errorMessage,
                 style = TextStyles.xxl,
                 modifier = Modifier
-                    .padding(start = Spacing.Horizontal.m, end = Spacing.Horizontal.m)
+                    .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
             )
         }
     }
