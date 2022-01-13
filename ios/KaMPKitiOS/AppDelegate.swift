@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         startKoin()
-
-        let viewController = UIHostingController(rootView: BreedListScreen())
+        
+        let viewController = UIHostingController(rootView: ContentView())
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController
