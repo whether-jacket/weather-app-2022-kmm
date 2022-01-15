@@ -9,64 +9,92 @@
 import SwiftUI
 import shared
 
+
+private let log = koin.loggerWithTag(tag: "ViewController")
+
+class ObservableWeatherModel: ObservableObject {
+        private var viewModel: ViewModel?
+
+        @Published
+        var loading = false
+
+        @Published
+        var weatherReport: WeatherReport()
+
+        @Published
+        var error: String?
+
+        func activate() {
+            viewModel = ViewModel { [weak self] dataState in
+                self?.loading = dataState.loading
+                self?.weatherReport = dataState.data?
+                self?.error = dataState.exception
+
+                if let weatherReport = dataState.data? {
+                    log.d(message: {"View updating with Weather Stats"})
+                }
+                if let errorMessage = dataState.exception {
+                    log.e(message: {"Displaying error: \(errorMessage)"})
+                }
+            }
+        }
+    
+    func deactivate() {
+           viewModel?.onDestroy()
+           viewModel = nil
+       }
+}
+
+struct WeatherScreen: View {
+    @ObservedObject
+    var observableModel = ObservableWeatherModel
+
+    var body: some View {
+        ContentView(
+            loading: observableModel.loading,
+            weather: observableModel.weatherReport,
+            error: observableModel.error
+        )
+        .onAppear(perform: {
+            observableModel.activate()
+        })
+        .onDisappear(perform: {
+            observableModel.deactivate()
+        })
+    }
+}
+
+
 struct ContentView: View {
+    var loading: Bool
+    var weatherReport: WeatherReport()
+    var error: String?
+    
     var body: some View {
          HStack {
-             WeatherReportView(city: weather, country: country, temperature: temperature, humidity: humidity, windSpeed: windSpeed, airPressure: airPressure)
+             WeatherReportView()
          }.position(x: 220, y: 200)
      }
 }
 
 struct WeatherReportView: View {
-    var city: String
-    var country: String
-    var temperature: String
-    var humidity: String
-    var windSpeed: String
-    var airPressure: String
-    
+    var weatherReport: WeatherReport
     var body: some View {
         VStack(){
-            Text(city).bold().font(Font.custom("", size: 60.0))
-            Text(country).bold()
+            Text(weatherReport.cityTitle).bold().font(Font.custom("", size: 60.0))
+            Text(weatherReport.countryTitle).bold()
             HStack{
-                Text(temperature).padding(30)
-                Text(humidity).padding(30)
+                Text(weatherReport.temperature).padding(30)
+                Text(weatherReport.humidity).padding(30)
             }
             HStack{
-                Text(windSpeed).padding(30)
-                Text(airPressure).padding(30)
+                Text(weatherReport.windSpeed).padding(30)
+                Text(weatherReport.airPressure).padding(30)
             }
         }
-    }
+    }.onAppear()
 }
-struct load{
-    let weatherUseCase = WeatherUseCase(weatherRepo: WeatherRepo())
-    var weather = "Loading..."
-    var country = "Loading..."
-    var temperature = "Loading..."
-    var humidity = "Loading..."
-    var windSpeed = "Loading..."
-    var airPressure = "Loading..."
-    let defaultValue = "error"
-     
-    weatherUseCase.getWeatherReport() { result,  error in
-            switch result {
-            case let successResponse as ResponseSuccess<WeatherReport>:
-                weather = successResponse.data?.cityTitle ?? defaultValue
-                country = successResponse.data?.countryTitle ?? defaultValue
-                temperature = successResponse.data?.temperature ?? defaultValue
-                humidity = successResponse.data?.humidity ?? defaultValue
-                windSpeed = successResponse.data?.windSpeed ?? defaultValue
-                airPressure = successResponse.data?.airPressure ?? defaultValue
-                let viewController = UIHostingController(rootView: ContentView(weather: weather, country: country, temperature: temperature, humidity: humidity, windSpeed: windSpeed, airPressure: airPressure))
-            case let errorResponse as ResponseFailure<WeatherReport>:
-                weather = errorResponse.message
-            default:
-                weather = "We hit some response"
-        }
-    }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
