@@ -27,8 +27,11 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
         }
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 8f72f5e8477514e95eb7b4604da79e1f28cda84f
     private fun getErrorType(t: Throwable): HttpStatusCode =
         when (t) {
             is ResponseException -> t.response.status
