@@ -19,7 +19,7 @@ class ObservableWeatherModel: ObservableObject {
         var loading = false
 
         @Published
-        var weatherReport: WeatherReport()
+        var weatherReport: WeatherReport()?
 
         @Published
         var error: String?
@@ -65,14 +65,14 @@ struct WeatherScreen: View {
 }
 
 
-struct ContentView: View {
+struct WeatherViewContent: View {
     var loading: Bool
     var weatherReport: WeatherReport()
     var error: String?
     
     var body: some View {
          HStack {
-             WeatherReportView()
+             WeatherReportView(weatherReport)
          }.position(x: 220, y: 200)
      }
 }
@@ -98,6 +98,5 @@ struct WeatherReportView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(weather: "London", country: "England", temperature: "100F", humidity: "10%", windSpeed: "35MPH", airPressure: "100tons" )
     }
 }
