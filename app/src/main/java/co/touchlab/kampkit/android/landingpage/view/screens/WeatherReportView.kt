@@ -45,10 +45,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.temperature,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
                 Row {
@@ -56,10 +53,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.humidity,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
             }
@@ -73,10 +67,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.windSpeed,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
                 Row(
@@ -86,10 +77,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.airPressure,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
             }

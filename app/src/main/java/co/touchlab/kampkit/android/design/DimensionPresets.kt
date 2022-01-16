@@ -110,5 +110,3 @@ object Transparency {
     const val xl = 0.05
     const val xxl = 0.03
 }
-
-

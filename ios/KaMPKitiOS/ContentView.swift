@@ -19,7 +19,7 @@ class ObservableWeatherModel: ObservableObject {
         var loading = false
 
         @Published
-        var weatherReport: WeatherReport()?
+        var weatherReport: WeatherReport?
 
         @Published
         var error: String?
@@ -27,11 +27,11 @@ class ObservableWeatherModel: ObservableObject {
         func activate() {
             viewModel = ViewModel { [weak self] dataState in
                 self?.loading = dataState.loading
-                self?.weatherReport = dataState.data?
+                self?.weatherReport = dataState.data
                 self?.error = dataState.exception
 
-                if let weatherReport = dataState.data? {
-                    log.d(message: {"View updating with Weather Stats"})
+                if let weatherReport = dataState.data {
+                    log.d(message: {"View updating with Weather Stats:\(weatherReport.cityTitle)"})
                 }
                 if let errorMessage = dataState.exception {
                     log.e(message: {"Displaying error: \(errorMessage)"})
@@ -47,12 +47,12 @@ class ObservableWeatherModel: ObservableObject {
 
 struct WeatherScreen: View {
     @ObservedObject
-    var observableModel = ObservableWeatherModel
+    var observableModel = ObservableWeatherModel()
 
     var body: some View {
-        ContentView(
+        WeatherViewContent(
             loading: observableModel.loading,
-            weather: observableModel.weatherReport,
+            weatherReport: observableModel.weatherReport,
             error: observableModel.error
         )
         .onAppear(perform: {
@@ -67,36 +67,32 @@ struct WeatherScreen: View {
 
 struct WeatherViewContent: View {
     var loading: Bool
-    var weatherReport: WeatherReport()
+    var weatherReport: WeatherReport?
     var error: String?
     
     var body: some View {
          HStack {
-             WeatherReportView(weatherReport)
+             WeatherReportView(weatherReport: weatherReport)
          }.position(x: 220, y: 200)
      }
 }
 
 struct WeatherReportView: View {
-    var weatherReport: WeatherReport
+    var weatherReport: WeatherReport?
+    
     var body: some View {
         VStack(){
-            Text(weatherReport.cityTitle).bold().font(Font.custom("", size: 60.0))
-            Text(weatherReport.countryTitle).bold()
+            Text(weatherReport!.cityTitle).bold().font(Font.custom("", size: 60.0))
+            Text(weatherReport!.countryTitle).bold()
             HStack{
-                Text(weatherReport.temperature).padding(30)
-                Text(weatherReport.humidity).padding(30)
+                Text(weatherReport!.temperature).padding(30)
+                Text(weatherReport!.humidity).padding(30)
             }
             HStack{
-                Text(weatherReport.windSpeed).padding(30)
-                Text(weatherReport.airPressure).padding(30)
+                Text(weatherReport!.windSpeed).padding(30)
+                Text(weatherReport!.airPressure).padding(30)
             }
         }
-    }.onAppear()
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
     }
 }
+

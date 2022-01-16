@@ -1,7 +1,7 @@
 package co.touchlab.kampkit.metaweather.model
 
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 @Serializable
 data class Region(

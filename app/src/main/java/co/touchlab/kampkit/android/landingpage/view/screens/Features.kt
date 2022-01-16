@@ -21,7 +21,6 @@ fun LoadingScreen() {
     ) {
         Text(text = "Loading...")
         LoadingSpinner()
-
     }
 }
 

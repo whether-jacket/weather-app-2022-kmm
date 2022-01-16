@@ -4,7 +4,6 @@ import co.touchlab.kampkit.metaweather.model.Response
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kampkit.models.DataState
-import co.touchlab.kampkit.models.ItemDataSummary
 import co.touchlab.kermit.Logger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview

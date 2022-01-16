@@ -1,7 +1,6 @@
 package co.touchlab.kampkit.metaweather.ktor
 
 import co.touchlab.kampkit.metaweather.model.WeatherForLocation
-import io.ktor.client.statement.HttpResponse
 
 interface MetaWeatherApi {
     suspend fun getWeatherFromApi(): WeatherForLocation

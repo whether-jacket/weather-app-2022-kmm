@@ -8,9 +8,9 @@ import co.touchlab.kampkit.AppInfo
 import co.touchlab.kampkit.android.BuildConfig.APPLICATION_ID
 import co.touchlab.kampkit.android.landingpage.viewmodel.ViewModel
 import co.touchlab.kampkit.initKoin
+import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 
 class MainApp : Application() {
 
@@ -35,4 +35,3 @@ class MainApp : Application() {
 object AndroidAppInfo : AppInfo {
     override val appId: String = APPLICATION_ID
 }
-
