@@ -9,7 +9,6 @@
 import SwiftUI
 import shared
 
-
 private let log = koin.loggerWithTag(tag: "ViewController")
 
 class ObservableWeatherModel: ObservableObject {
@@ -38,7 +37,6 @@ class ObservableWeatherModel: ObservableObject {
                 }
             }
         }
-    
     func deactivate() {
            viewModel?.onDestroy()
            viewModel = nil
@@ -79,18 +77,18 @@ struct WeatherViewContent: View {
 
 struct WeatherReportView: View {
     var weatherReport: WeatherReport?
-    
+
     var body: some View {
-        VStack(){
-            Text(weatherReport!.cityTitle).bold().font(Font.custom("", size: 60.0))
-            Text(weatherReport!.countryTitle).bold()
-            HStack{
-                Text(weatherReport!.temperature).padding(30)
-                Text(weatherReport!.humidity).padding(30)
+        VStack {
+            Text(weatherReport?.cityTitle ?? "Loading").bold().font(Font.custom("", size: 60.0))
+            Text(weatherReport?.countryTitle ?? "Loading").bold()
+            HStack {
+                Text(weatherReport?.temperature ?? "Loading").padding(30)
+                Text(weatherReport?.humidity ?? "Loading").padding(30)
             }
-            HStack{
-                Text(weatherReport!.windSpeed).padding(30)
-                Text(weatherReport!.airPressure).padding(30)
+            HStack {
+                Text(weatherReport?.windSpeed ?? "Loading").padding(30)
+                Text(weatherReport?.airPressure ?? "Loading").padding(30)
             }
         }
     }
