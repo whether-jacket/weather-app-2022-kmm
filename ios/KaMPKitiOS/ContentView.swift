@@ -1,15 +1,7 @@
-//
-//  ContentView.swift
-//  KaMPKitiOS
-//
-//  Created by Ramzi Jabali on 1/12/22.
-//  Copyright © 2022 Touchlab. All rights reserved.
-//
-
 import SwiftUI
 import shared
 
-private let log = koin.loggerWithTag(tag: "ViewController")
+private let log = koin.loggerWithTag(tag: "ObservableWeatherModel")
 
 class ObservableWeatherModel: ObservableObject {
         private var viewModel: ViewModel?
@@ -69,28 +61,21 @@ struct WeatherViewContent: View {
     var error: String?
     
     var body: some View {
-         HStack {
-             WeatherReportView(weatherReport: weatherReport)
-         }.position(x: 220, y: 200)
+        HStack(alignment: .center){
+                 VStack {
+                     Text(weatherReport?.cityTitle ?? "Loading").bold().font(Font.custom("", size: 60.0))
+                     Text(weatherReport?.countryTitle ?? "Loading").bold()
+                     HStack {
+                         Text(weatherReport?.temperature ?? "Loading").padding(30)
+                         Text(weatherReport?.humidity ?? "Loading").padding(30)
+                     }
+                     HStack {
+                         Text(weatherReport?.windSpeed ?? "Loading").padding(30)
+                         Text(weatherReport?.airPressure ?? "Loading").padding(30)
+                     }
+                 }
+         }
      }
 }
 
-struct WeatherReportView: View {
-    var weatherReport: WeatherReport?
-
-    var body: some View {
-        VStack {
-            Text(weatherReport?.cityTitle ?? "Loading").bold().font(Font.custom("", size: 60.0))
-            Text(weatherReport?.countryTitle ?? "Loading").bold()
-            HStack {
-                Text(weatherReport?.temperature ?? "Loading").padding(30)
-                Text(weatherReport?.humidity ?? "Loading").padding(30)
-            }
-            HStack {
-                Text(weatherReport?.windSpeed ?? "Loading").padding(30)
-                Text(weatherReport?.airPressure ?? "Loading").padding(30)
-            }
-        }
-    }
-}
 
