@@ -14,10 +14,10 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class ViewModel(
+class LandingPageViewModel(
     private val onDataState: (DataState<WeatherReport>) -> Unit
 ) : KoinComponent {
-    private val log: Logger by injectLogger("WeatherUseCase")
+    private val log: Logger by injectLogger("LandingPageViewModel")
     private val weatherUseCase: WeatherUseCase by inject<WeatherUseCase>()
     private val scope = MainScope(Dispatchers.Main, log)
     private val _weatherStateFlow: MutableStateFlow<DataState<WeatherReport>> = MutableStateFlow(

@@ -4,7 +4,7 @@ import shared
 private let log = koin.loggerWithTag(tag: "ObservableWeatherModel")
 
 class ObservableWeatherModel: ObservableObject {
-        private var viewModel: ViewModel?
+        private var viewModel: LandingPageViewModel?
 
         @Published
         var loading = false
@@ -16,7 +16,7 @@ class ObservableWeatherModel: ObservableObject {
         var error: String?
 
         func activate() {
-            viewModel = ViewModel { [weak self] dataState in
+            viewModel = LandingPageViewModel { [weak self] dataState in
                 self?.loading = dataState.loading
                 self?.weatherReport = dataState.data
                 self?.error = dataState.exception
@@ -64,14 +64,14 @@ struct WeatherViewContent: View {
         HStack(alignment: .center){
                  VStack {
                      Text(weatherReport?.cityTitle ?? "Loading").bold().font(Font.custom("", size: 60.0))
-                     Text(weatherReport?.countryTitle ?? "Loading").bold()
+                     Text(weatherReport?.countryTitle ?? "").bold()
                      HStack {
-                         Text(weatherReport?.temperature ?? "Loading").padding(30)
-                         Text(weatherReport?.humidity ?? "Loading").padding(30)
+                         Text(weatherReport?.temperature ?? "").padding(30)
+                         Text(weatherReport?.humidity ?? "").padding(30)
                      }
                      HStack {
-                         Text(weatherReport?.windSpeed ?? "Loading").padding(30)
-                         Text(weatherReport?.airPressure ?? "Loading").padding(30)
+                         Text(weatherReport?.windSpeed ?? "").padding(30)
+                         Text(weatherReport?.airPressure ?? "").padding(30)
                      }
                  }
          }
