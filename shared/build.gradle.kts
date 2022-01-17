@@ -15,7 +15,7 @@ android {
     }
 
     lint {
-        isWarningsAsErrors = false
+        isWarningsAsErrors = true
         isAbortOnError = false
     }
 }
