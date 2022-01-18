@@ -65,11 +65,11 @@ struct WeatherViewContent: View {
                      Text(weatherReport?.cityTitle ?? "Loading...").bold().font(TextStyle.headline.getFont())
                      Text(weatherReport?.countryTitle ?? "").bold()
                      Divider()
-                     HStack {
+                     HStack(spacing: HorizontalSpacings.x10){
                          Text(weatherReport?.temperature ?? "")
                          Text(weatherReport?.humidity ?? "")
                      }.padding(SurroundingSpacings.large)
-                     HStack {
+                     HStack(spacing: HorizontalSpacings.x10){
                          Text(weatherReport?.windSpeed ?? "")
                          Text(weatherReport?.airPressure ?? "")
                      }.padding(SurroundingSpacings.large)

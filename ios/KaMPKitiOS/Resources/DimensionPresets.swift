@@ -39,6 +39,7 @@ struct HorizontalSpacings {
     static let medium = Spacings.double
     static let large = Spacings.quadruple
     static let xlarge = Spacings.octuple
+    static let x10 = Spacings.tredecuple
     static let xl2 = Spacings.sexdecuple
 }
 
@@ -49,6 +50,7 @@ struct VerticalSpacings {
     static let medium = Spacings.double
     static let large = Spacings.quadruple
     static let xlarge = Spacings.octuple
+    static let x10 = Spacings.tredecuple
     static let xl2 = Spacings.sexdecuple
 }
 
