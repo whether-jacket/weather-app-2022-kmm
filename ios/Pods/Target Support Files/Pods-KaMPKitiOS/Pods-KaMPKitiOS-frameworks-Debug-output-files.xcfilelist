@@ -1,1 +1,3 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework
 ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/shared.framework
+${DWARF_DSYM_FOLDER_PATH}/shared.framework.dSYM

@@ -59,22 +59,21 @@ struct WeatherViewContent: View {
     var loading: Bool
     var weatherReport: WeatherReport?
     var error: String?
-    
     var body: some View {
         HStack(alignment: .center){
                  VStack {
-                     Text(weatherReport?.cityTitle ?? "Loading").bold().font(Font.custom("", size: 60.0))
+                     Text(weatherReport?.cityTitle ?? "Loading...").bold().font(TextStyle.headline.getFont())
                      Text(weatherReport?.countryTitle ?? "").bold()
                      HStack {
-                         Text(weatherReport?.temperature ?? "").padding(30)
-                         Text(weatherReport?.humidity ?? "").padding(30)
-                     }
+                         Text(weatherReport?.temperature ?? "")
+                         Text(weatherReport?.humidity ?? "")
+                     }.padding(SurroundingSpacings.large)
                      HStack {
-                         Text(weatherReport?.windSpeed ?? "").padding(30)
-                         Text(weatherReport?.airPressure ?? "").padding(30)
-                     }
+                         Text(weatherReport?.windSpeed ?? "")
+                         Text(weatherReport?.airPressure ?? "")
+                     }.padding(SurroundingSpacings.large)
                  }
-         }
+        }.font(TextStyle.body.getFont())
      }
 }
 
