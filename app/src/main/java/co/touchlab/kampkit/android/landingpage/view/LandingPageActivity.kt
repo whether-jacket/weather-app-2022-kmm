@@ -1,7 +1,6 @@
 package co.touchlab.kampkit.android.landingpage.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
@@ -9,8 +8,8 @@ import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
 import co.touchlab.kampkit.android.landingpage.viewmodel.ViewModel
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
-import org.koin.core.component.KoinComponent
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.component.KoinComponent
 import org.orbitmvi.orbit.viewmodel.observe
 
 class LandingPageActivity : ComponentActivity(), KoinComponent {

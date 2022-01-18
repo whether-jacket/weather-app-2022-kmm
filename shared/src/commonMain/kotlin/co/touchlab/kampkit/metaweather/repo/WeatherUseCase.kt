@@ -15,7 +15,7 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
             val weatherReport = WeatherReport(
                 cityTitle = response.cityTitle,
                 countryTitle = response.parentRegion.title,
-                temperature = "Temperature\n${response.consolidatedWeather[0].theTemp} F",
+                temperature = "Temperature\n${response.consolidatedWeather[0].theTemp} C",
                 humidity = "Humidity\n${floor(response.consolidatedWeather[0].humidity).toInt()}",
                 windSpeed = "Wind Speed\n${floor(response.consolidatedWeather[0].windSpeed).toInt()}",
                 airPressure = "Air Pressure\n${floor(response.consolidatedWeather[0].airPressure).toInt()}"

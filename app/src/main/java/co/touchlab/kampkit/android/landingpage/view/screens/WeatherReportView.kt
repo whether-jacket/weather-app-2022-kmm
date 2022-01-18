@@ -11,7 +11,6 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import co.touchlab.kampkit.android.design.Spacing
 import co.touchlab.kampkit.android.design.styles.TextStyles
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
@@ -46,10 +45,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.temperature,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
                 Row {
@@ -57,10 +53,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.humidity,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
             }
@@ -74,10 +67,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.windSpeed,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
                 Row(
@@ -87,10 +77,7 @@ fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {
                         text = weatherReport.airPressure,
                         style = TextStyles.xxl,
                         modifier = Modifier
-                            .padding(
-                                start = Spacing.Surrounding.m,
-                                end = Spacing.Surrounding.m
-                            )
+                            .padding(start = Spacing.Surrounding.m, end = Spacing.Surrounding.m)
                     )
                 }
             }
