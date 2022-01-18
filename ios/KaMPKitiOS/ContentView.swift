@@ -64,6 +64,7 @@ struct WeatherViewContent: View {
                  VStack {
                      Text(weatherReport?.cityTitle ?? "Loading...").bold().font(TextStyle.headline.getFont())
                      Text(weatherReport?.countryTitle ?? "").bold()
+                     Divider()
                      HStack {
                          Text(weatherReport?.temperature ?? "")
                          Text(weatherReport?.humidity ?? "")
@@ -72,7 +73,7 @@ struct WeatherViewContent: View {
                          Text(weatherReport?.windSpeed ?? "")
                          Text(weatherReport?.airPressure ?? "")
                      }.padding(SurroundingSpacings.large)
-                 }
+                 }.multilineTextAlignment(.center)
         }.font(TextStyle.body.getFont())
      }
 }
