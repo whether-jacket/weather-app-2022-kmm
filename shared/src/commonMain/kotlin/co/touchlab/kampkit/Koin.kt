@@ -1,7 +1,5 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.ktor.DogApiImpl
-import co.touchlab.kampkit.ktor.KtorApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
@@ -9,7 +7,6 @@ import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
-import kotlinx.coroutines.Dispatchers
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
@@ -44,18 +41,6 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
-    single {
-        DatabaseHelper(
-            get(),
-            getWith("DatabaseHelper"),
-            Dispatchers.Default
-        )
-    }
-    single<KtorApi> {
-        DogApiImpl(
-            getWith("DogApiImpl")
-        )
-    }
     single<MetaWeatherApi> {
         MetaWeatherApiImpl()
     }
