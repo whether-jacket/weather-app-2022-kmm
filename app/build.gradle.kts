@@ -54,5 +54,4 @@ dependencies {
     implementation(libs.compose.navigation)
     implementation(libs.orbit.mvi.viewmodel)
     implementation(libs.orbit.mvi.core)
-    implementation(libs.androidx.lifecycle.livedata)
 }

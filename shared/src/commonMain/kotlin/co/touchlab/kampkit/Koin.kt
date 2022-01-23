@@ -4,10 +4,12 @@ import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
+import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
 import kotlinx.datetime.Clock
+import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
