@@ -8,6 +8,7 @@ import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
 import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
 import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
+import co.touchlab.kampkit.metaweather.viewmodel.ViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 import org.orbitmvi.orbit.viewmodel.observe
