@@ -1,9 +1,11 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
+    kotlin("kapt")
     id("kotlinx-serialization")
     id("com.android.library")
     id("com.squareup.sqldelight")
+    id("org.orbit-mvi.orbit.swift") version "0.1.0"
 }
 
 android {
@@ -21,6 +23,7 @@ android {
 }
 
 version = "1.0"
+// dependencies {}
 
 android {
     configurations {
@@ -53,6 +56,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api(libs.touchlab.kermit)
+                api(libs.orbit.mvi.core)
+                api(libs.icerock.moko.mvvm.core)
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
                 implementation(libs.sqlDelight.coroutinesExt)
@@ -60,7 +66,6 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
-                api(libs.touchlab.kermit)
             }
         }
         val commonTest by getting {
@@ -72,6 +77,9 @@ kotlin {
             dependencies {
                 implementation(libs.sqlDelight.android)
                 implementation(libs.ktor.client.okHttp)
+                implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.orbit.mvi.viewmodel)
+                implementation(libs.koin.android)
             }
         }
         val androidTest by getting {

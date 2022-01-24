@@ -1,10 +1,10 @@
-package co.touchlab.kampkit.android.landingpage.viewmodel
+package co.touchlab.kampkit.metaweather.viewmodel
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import co.touchlab.kampkit.android.landingpage.view.ViewState
 import co.touchlab.kampkit.metaweather.model.Response
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
+import co.touchlab.kampkit.metaweather.viewmodel.ViewState
+import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.orbitmvi.orbit.Container
@@ -13,10 +13,7 @@ import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.reduce
 import org.orbitmvi.orbit.viewmodel.container
 
-class ViewModel(private val weatherUseCase: WeatherUseCase) :
-    ContainerHost<ViewState, String>,
-    ViewModel(),
-    KoinComponent {
+class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ContainerHost<ViewState, String>, KoinComponent, ViewModel(){
 
     override val container: Container<ViewState, String> = container(ViewState())
 
@@ -28,7 +25,6 @@ class ViewModel(private val weatherUseCase: WeatherUseCase) :
         }
         loadWeatherReport()
     }
-
     private fun loadWeatherReport() = intent {
         viewModelScope.launch {
             var newViewState = ViewState()

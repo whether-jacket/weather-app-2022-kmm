@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.android.landingpage.view
+package co.touchlab.kampkit.metaweather.viewmodel
 
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 
