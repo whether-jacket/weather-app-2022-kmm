@@ -15,7 +15,7 @@ actual class DependencyInjection(private val application: Application) {
     actual fun initialiseDependencyInjection(block: KoinAppDeclaration) {
         startKoin {
             androidContext(application)
-            modules(coreModule(), androidModule())
+            modules(getCoreModule(), androidModule())
             block()
         }
     }

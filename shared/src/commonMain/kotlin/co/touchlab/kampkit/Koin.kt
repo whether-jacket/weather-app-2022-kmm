@@ -20,6 +20,7 @@ import org.koin.core.scope.Scope
 import org.koin.dsl.module
 
 fun initKoin(appModule: Module): KoinApplication {
+    fun getCoreModule(): Module = coreModule
     val koinApplication = startKoin {
         modules(
             appModule,
