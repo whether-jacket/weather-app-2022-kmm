@@ -1,5 +1,6 @@
 package co.touchlab.kampkit
 
+import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
@@ -50,6 +51,7 @@ private val coreModule = module {
     }
     factory<WeatherRepo> { WeatherRepo() }
     factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
+    factory<SharedViewModel> { SharedViewModel(get<WeatherUseCase>()) }
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,

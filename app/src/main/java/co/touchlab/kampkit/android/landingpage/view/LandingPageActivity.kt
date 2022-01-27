@@ -9,14 +9,14 @@ import co.touchlab.kampkit.injectLogger
 import co.touchlab.kermit.Logger
 import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kampkit.metaweather.viewmodel.ViewState
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 import org.orbitmvi.orbit.viewmodel.observe
 
 class LandingPageActivity : ComponentActivity(), KoinComponent {
 
     private val log: Logger by injectLogger(LandingPageActivity::class.toString())
-    private val viewModel: SharedViewModel by viewModel()
+    private val viewModel: SharedViewModel by inject<SharedViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -5,6 +5,7 @@ import shared
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let sharedViewModel = nil
 
     // Lazy so it doesn't try to initialize before startKoin() is called
     // swiftlint:disable force_cast
