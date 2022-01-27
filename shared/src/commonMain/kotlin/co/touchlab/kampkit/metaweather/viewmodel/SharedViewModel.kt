@@ -21,6 +21,7 @@ class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ViewModel(),
     fun startMakingApiCall() = intent {
         reduce {
             ViewState(isInProgress = true)
+            state.copy(isInProgress = true)
         }
         loadWeatherReport()
     }
@@ -44,6 +45,7 @@ class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ViewModel(),
             }
             reduce {
                 newViewState
+                state.copy(newViewState)
             }
         }
     }
