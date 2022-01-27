@@ -107,7 +107,6 @@
 				76752E9E27972EDC0083A68D /* DimensionPresets.swift */,
 				76752EA32797371F0083A68D /* Colors.swift */,
 				76752EA5279744E40083A68D /* TextStyle.swift */,
-				CD56553A27A23FFA00C0CFAE /* WeatherForecastView.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -151,6 +150,7 @@
 				76752E9D27972E990083A68D /* Resources */,
 				F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */,
 				46A5B60626B04920002EFEAA /* Main.storyboard */,
+				CD56553A27A23FFA00C0CFAE /* WeatherForecastView.swift */,
 				46B5284C249C5CF400A7725D /* Koin.swift */,
 				F1465F0923AA94BF0055F7C3 /* Assets.xcassets */,
 				F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */,
