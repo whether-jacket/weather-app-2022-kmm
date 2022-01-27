@@ -11,11 +11,16 @@ import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.reduce
 import org.orbitmvi.orbit.syntax.simple.postSideEffect
-import org.orbitmvi.orbit.viewmodel.container
+// import org.orbitmvi.orbit.viewmodel.container
 
 class SharedViewModel(private val weatherUseCase: WeatherUseCase) :  ViewModel(), ContainerHost<ViewState, String>, KoinComponent {
 
-    override val container: Container<ViewState, String> = container(initialState = ViewState()) {
+    // override val container: Container<ViewState, String> = container(initialState = ViewState()) {
+    //     startMakingApiCall()
+    // }
+    override val container: container<ViewState, String> = container<ViewState, String>(
+        initialState = ViewState()
+    ) {
         startMakingApiCall()
     }
 

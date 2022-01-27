@@ -16,7 +16,8 @@ livedata = "2.4.0"
 orbit = "4.3.0"
 orbitcore = "3.1.1"
 sqlDelight = "1.5.3"
-moko = "0.11.0"
+mokoMvvm = "0.11.0"
+mokoParcelize = "0.7.1"
 
 [libraries]
 
@@ -30,7 +31,8 @@ androidx-lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata-
 orbit-mvi-core = { module = "org.orbit-mvi:orbit-core", version.ref = "orbit" }
 orbit-mvi-viewmodel = { module = "org.orbit-mvi:orbit-viewmodel", version.ref = "orbit" }
 
-icerock-moko-mvvm-core = {module = "dev.icerock.moko:mvvm-core", version.ref = "moko"}
+icerock-moko-mvvm-core = {module = "dev.icerock.moko:mvvm-core", version.ref = "mokoMvvm"}
+icerock-moko-parcelize = {module = "dev.icerock.moko:parcelize", version.ref = "mokoParcelize"}
 
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
 compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }

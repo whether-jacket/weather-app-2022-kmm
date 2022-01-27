@@ -66,6 +66,7 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
+                implementation(libs.icerock.moko.parcelize)
             }
         }
         val commonTest by getting {
