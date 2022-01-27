@@ -4,7 +4,8 @@ import shared
 private let log = koin.loggerWithTag(tag: "ObservableWeatherModel")
 
 class ObservableWeatherModel: ObservableObject {
-        private var viewModel: SharedViewModel?
+        private var viewModel: LandingPageViewModel?
+        @StateObject private var sharedViewModel: SharedViewModel = ViewModel.getSharedViewModel.asStateObject
 
         @Published
         var loading = false
