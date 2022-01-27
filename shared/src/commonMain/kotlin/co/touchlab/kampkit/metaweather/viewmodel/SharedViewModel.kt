@@ -14,13 +14,14 @@ import org.orbitmvi.orbit.viewmodel.container
 
 class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ViewModel(), ContainerHost<ViewState, String>, KoinComponent {
 
-    override val container: Container<ViewState, String> = container(ViewState())
+    override val container: Container<ViewState, String> = container(initialState = ViewState()) {
+        startMakingApiCall()
+    }
 
     private var viewState = ViewState()
 
-    fun startMakingApiCall() = intent {
+    private fun startMakingApiCall() = intent {
         reduce {
-            ViewState(isInProgress = true)
             state.copy(isInProgress = true)
         }
         loadWeatherReport()
@@ -44,8 +45,8 @@ class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ViewModel(),
                 }
             }
             reduce {
-                newViewState
-                state.copy(newViewState)
+                state.copy(weatherReport = newViewState.weatherReport,
+                            isInProgress = newViewState.isInProgress)
             }
         }
     }

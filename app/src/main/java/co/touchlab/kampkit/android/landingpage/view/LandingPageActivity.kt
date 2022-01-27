@@ -25,7 +25,6 @@ class LandingPageActivity : ComponentActivity(), KoinComponent {
             sideEffect = ::handleSideEffect,
             lifecycleOwner = this@LandingPageActivity
         )
-        viewModel.startMakingApiCall()
     }
 
     private fun render(viewState: ViewState) {
