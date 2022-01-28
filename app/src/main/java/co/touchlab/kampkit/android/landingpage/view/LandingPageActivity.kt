@@ -6,9 +6,9 @@ import androidx.activity.compose.setContent
 import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
 import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
 import co.touchlab.kampkit.injectLogger
-import co.touchlab.kermit.Logger
 import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kampkit.metaweather.viewmodel.ViewState
+import co.touchlab.kermit.Logger
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import org.orbitmvi.orbit.viewmodel.observe

@@ -17,7 +17,7 @@ android {
     }
 
     lint {
-        isWarningsAsErrors = true
+        isWarningsAsErrors = false
         isAbortOnError = false
     }
 }
@@ -40,7 +40,7 @@ kotlin {
     android()
     ios()
     // Note: iosSimulatorArm64 target requires that all dependencies have M1 support
-    iosSimulatorArm64()
+    // iosSimulatorArm64()
 
     version = "1.1"
 
@@ -101,12 +101,12 @@ kotlin {
             }
         }
         val iosTest by getting
-        val iosSimulatorArm64Main by getting {
-            dependsOn(iosMain)
-        }
-        val iosSimulatorArm64Test by getting {
-            dependsOn(iosTest)
-        }
+        // val iosSimulatorArm64Main by getting {
+        //     dependsOn(iosMain)
+        // }
+        // val iosSimulatorArm64Test by getting {
+        //     dependsOn(iosTest)
+        // }
     }
 
     sourceSets.matching { it.name.endsWith("Test") }

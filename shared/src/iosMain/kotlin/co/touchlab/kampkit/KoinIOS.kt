@@ -1,8 +1,6 @@
 package co.touchlab.kampkit
 
 import co.touchlab.kampkit.db.KaMPKitDb
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
-import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kermit.Logger
 import com.russhwolf.settings.AppleSettings
 import com.russhwolf.settings.Settings
@@ -10,7 +8,6 @@ import com.squareup.sqldelight.db.SqlDriver
 import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
-import org.koin.core.context.GlobalContext.get
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
 import platform.Foundation.NSUserDefaults
