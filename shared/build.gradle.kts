@@ -120,7 +120,7 @@ kotlin {
         framework {
             isStatic = false // SwiftUI preview requires dynamic framework
         }
-        ios.deploymentTarget = "12.4"
+        ios.deploymentTarget = "14.1"
         podfile = project.file("../ios/Podfile")
     }
 }
