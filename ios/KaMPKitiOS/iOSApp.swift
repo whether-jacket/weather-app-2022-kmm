@@ -1,11 +1,3 @@
-//
-//  iOSApp.swift
-//  KaMPKitiOS
-//
-//  Created by Ramzi Jabali on 1/25/22.
-//  Copyright © 2022 Touchlab. All rights reserved.
-//
-
 import shared
 import SwiftUI
 
@@ -19,7 +11,7 @@ struct iOSApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WeatherView()
         }
     }
 }

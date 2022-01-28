@@ -1,6 +1,7 @@
 import SwiftUI
 import shared
 
+@available(iOS 14.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         startKoin()
-        
         let viewController = UIHostingController(rootView: WeatherView())
 
         self.window = UIWindow(frame: UIScreen.main.bounds)

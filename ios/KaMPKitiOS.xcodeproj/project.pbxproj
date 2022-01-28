@@ -14,7 +14,6 @@
 		76752EA42797371F0083A68D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752EA32797371F0083A68D /* Colors.swift */; };
 		76752EA6279744E40083A68D /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752EA5279744E40083A68D /* TextStyle.swift */; };
 		76752EA827A0A2750083A68D /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752EA727A0A2750083A68D /* iOSApp.swift */; };
-		76819C29278FA35E0089AB6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76819C28278FA35D0089AB6C /* ContentView.swift */; };
 		CD56553B27A23FFA00C0CFAE /* WeatherForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD56553A27A23FFA00C0CFAE /* WeatherForecastView.swift */; };
 		F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */; };
 		F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0923AA94BF0055F7C3 /* Assets.xcassets */; };
@@ -49,7 +48,6 @@
 		76752EA32797371F0083A68D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		76752EA5279744E40083A68D /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		76752EA727A0A2750083A68D /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
-		76819C28278FA35D0089AB6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD56553A27A23FFA00C0CFAE /* WeatherForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastView.swift; sourceTree = "<group>"; };
 		ED1F782AF3705197012D0C33 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				F1465F0923AA94BF0055F7C3 /* Assets.xcassets */,
 				F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */,
 				F1465F0E23AA94BF0055F7C3 /* Info.plist */,
-				76819C28278FA35D0089AB6C /* ContentView.swift */,
 				76752EA727A0A2750083A68D /* iOSApp.swift */,
 			);
 			path = KaMPKitiOS;
@@ -380,7 +377,6 @@
 				76752E9F27972EDC0083A68D /* DimensionPresets.swift in Sources */,
 				CD56553B27A23FFA00C0CFAE /* WeatherForecastView.swift in Sources */,
 				F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */,
-				76819C29278FA35E0089AB6C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
