@@ -1,6 +1,5 @@
 package co.touchlab.kampkit.metaweather.viewmodel
 
-import androidx.lifecycle.viewModelScope
 import co.touchlab.kampkit.metaweather.model.Response
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kampkit.metaweather.viewmodel.ViewState
