@@ -46,7 +46,6 @@ google-accompanist-swipeRefresh = { module = "com.google.accompanist:accompanist
 
 gradlePlugin-android = { module = "com.android.tools.build:gradle", version = "7.0.3" }
 gradlePlugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-gradlePlugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "10.2.0" }
 gradlePlugin-sqlDelight = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
 
 junit = { module = "junit:junit", version = "4.13.2" }
@@ -93,7 +92,6 @@ app-ui = [
 gradlePlugins = [
     "gradlePlugin-android",
     "gradlePlugin-kotlinSerialization",
-    "gradlePlugin-ktlint",
     "gradlePlugin-sqlDelight",
 ]
 ktor-common = ["ktor-client-core", "ktor-client-logging", "ktor-client-serialization"]
