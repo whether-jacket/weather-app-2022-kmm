@@ -1,14 +1,21 @@
+# IntelliJ
 *.iml
-.gradle
-/local.properties
-/.idea
+
+# Mac
 .DS_Store
-/build
-/buildSrc/build
-/captures
-.externalNativeBuild
+
+# KMM
 .cxx
+.externalNativeBuild
+.idea
+.gradle
+app/build
+build
+buildSrc/build
+captures
+local.properties
+shared/build
+
+# iOS
 *.xcuserstate
 *.xcbkptlist
-!/.idea/codeStyles/*
-!/.idea/inspectionProfiles/*
