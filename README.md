@@ -1,8 +1,8 @@
 <div id="top"></div>
 
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android.png?raw=true" alt="" data-canonical-src="" width="340" height="375" />
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/ios.png?raw=true" alt="" data-canonical-src="" width="340" height="375" />
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/ios.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
 </p></br>
 
 <h2 align="center">Weather App 2022 KMM</h2>
@@ -120,7 +120,7 @@ sudo xcodebuild -license
 
 `Xcode -> Preferences -> Locations -> Command Line Tools -> [Select latest]`
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/xcode-1.png?raw=true" alt="" data-canonical-src="" />
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/xcode-1.png?raw=true" alt="" data-canonical-src="" />
 </p>
 
 If you don't do this, on builds you may see the following errors:
@@ -142,11 +142,11 @@ xcrun: error: unable to find utility "xcodebuild", not a developer tool or in PA
 
 When installing Android Studio, choose custom:<br>
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android-studio-1.png?raw=true" alt="" data-canonical-src=""/>
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-1.png?raw=true" alt="" data-canonical-src=""/>
 </p>
 Insert custom directory for Android SDK:<br>
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android-studio-2.png?raw=true" alt="" data-canonical-src=""/>
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-2.png?raw=true" alt="" data-canonical-src=""/>
 </p>
 </details>
 
@@ -211,7 +211,7 @@ Open the project in Android Studio. <br>
 Wait for indexing to finish. <br>
 Make sure you see the run config for the app:
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android-studio-3.png?raw=true" alt="" data-canonical-src=""/>
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-3.png?raw=true" alt="" data-canonical-src=""/>
 </p>
 Run the Android app on either emulator or phone.<br>
 </details>
@@ -221,12 +221,12 @@ Run the Android app on either emulator or phone.<br>
 
 If you see following error:
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android-studio-4.png?raw=true" alt="" data-canonical-src=""/>
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-4.png?raw=true" alt="" data-canonical-src=""/>
 </p>
 
 Go to `Preferences -> Build, Execution, Deployment -> Build Tools -> Gradle -> Select Gradle JDK`
 <p align="center">
-<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/develop/docs/android-studio-5.png?raw=true" alt="" data-canonical-src=""/>
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-5.png?raw=true" alt="" data-canonical-src=""/>
 </p>  
 </details>  
 
