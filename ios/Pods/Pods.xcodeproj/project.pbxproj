@@ -7,20 +7,11 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 46EB2E000002E0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
-			buildPhases = (
-			);
-			dependencies = (
-			);
-			name = SwiftLint;
-		};
 		8777C9F6889E59EFFD631D80AEE9048B /* shared */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 46EB2E00000620 /* Build configuration list for PBXAggregateTarget "shared" */;
+			buildConfigurationList = 46EB2E000005C0 /* Build configuration list for PBXAggregateTarget "shared" */;
 			buildPhases = (
-				46EB2E000007D0 /* [CP-User] Build shared */,
+				46EB2E00000780 /* [CP-User] Build shared */,
 			);
 			dependencies = (
 			);
@@ -29,55 +20,48 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		46EB2E000003E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000003D0 /* Foundation.framework */; };
-		46EB2E000003F0 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000100 /* ColorExtensions.swift */; };
-		46EB2E00000400 /* EdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000110 /* EdgeInsetsExtensions.swift */; };
-		46EB2E00000410 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* ArrayExtensions.swift */; };
-		46EB2E00000420 /* BidirectionalCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000130 /* BidirectionalCollectionExtensions.swift */; };
-		46EB2E00000430 /* BinaryFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* BinaryFloatingPointExtensions.swift */; };
-		46EB2E00000440 /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000150 /* BoolExtensions.swift */; };
-		46EB2E00000450 /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* CharacterExtensions.swift */; };
-		46EB2E00000460 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000170 /* CollectionExtensions.swift */; };
-		46EB2E00000470 /* ComparableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* ComparableExtensions.swift */; };
-		46EB2E00000480 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000190 /* DecodableExtensions.swift */; };
-		46EB2E00000490 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* DictionaryExtensions.swift */; };
-		46EB2E000004A0 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001B0 /* DoubleExtensions.swift */; };
-		46EB2E000004B0 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001C0 /* FloatExtensions.swift */; };
-		46EB2E000004C0 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001D0 /* FloatingPointExtensions.swift */; };
-		46EB2E000004D0 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001E0 /* IntExtensions.swift */; };
-		46EB2E000004E0 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001F0 /* KeyedDecodingContainerExtensions.swift */; };
-		46EB2E000004F0 /* MutableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000200 /* MutableCollectionExtensions.swift */; };
-		46EB2E00000500 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* OptionalExtensions.swift */; };
-		46EB2E00000510 /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* RandomAccessCollectionExtensions.swift */; };
-		46EB2E00000520 /* RangeReplaceableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000230 /* RangeReplaceableCollectionExtensions.swift */; };
-		46EB2E00000530 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000240 /* SequenceExtensions.swift */; };
-		46EB2E00000540 /* SignedIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000250 /* SignedIntegerExtensions.swift */; };
-		46EB2E00000550 /* SignedNumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000260 /* SignedNumericExtensions.swift */; };
-		46EB2E00000560 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000270 /* StringExtensions.swift */; };
-		46EB2E00000570 /* StringProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000280 /* StringProtocolExtensions.swift */; };
-		46EB2E000005C0 /* SwifterSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E000005B0 /* SwifterSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00000600 /* SwifterSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000005F0 /* SwifterSwift-dummy.m */; };
-		46EB2E00000700 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E000003D0 /* Foundation.framework */; };
-		46EB2E00000770 /* Pods-KaMPKitiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000760 /* Pods-KaMPKitiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E000007C0 /* Pods-KaMPKitiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000007B0 /* Pods-KaMPKitiOS-dummy.m */; };
+		46EB2E00000370 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000360 /* Foundation.framework */; };
+		46EB2E00000380 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000000F0 /* ColorExtensions.swift */; };
+		46EB2E00000390 /* EdgeInsetsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000100 /* EdgeInsetsExtensions.swift */; };
+		46EB2E000003A0 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000110 /* ArrayExtensions.swift */; };
+		46EB2E000003B0 /* BidirectionalCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000120 /* BidirectionalCollectionExtensions.swift */; };
+		46EB2E000003C0 /* BinaryFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000130 /* BinaryFloatingPointExtensions.swift */; };
+		46EB2E000003D0 /* BoolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000140 /* BoolExtensions.swift */; };
+		46EB2E000003E0 /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000150 /* CharacterExtensions.swift */; };
+		46EB2E000003F0 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000160 /* CollectionExtensions.swift */; };
+		46EB2E00000400 /* ComparableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000170 /* ComparableExtensions.swift */; };
+		46EB2E00000410 /* DecodableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000180 /* DecodableExtensions.swift */; };
+		46EB2E00000420 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000190 /* DictionaryExtensions.swift */; };
+		46EB2E00000430 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001A0 /* DoubleExtensions.swift */; };
+		46EB2E00000440 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001B0 /* FloatExtensions.swift */; };
+		46EB2E00000450 /* FloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001C0 /* FloatingPointExtensions.swift */; };
+		46EB2E00000460 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001D0 /* IntExtensions.swift */; };
+		46EB2E00000470 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001E0 /* KeyedDecodingContainerExtensions.swift */; };
+		46EB2E00000480 /* MutableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E000001F0 /* MutableCollectionExtensions.swift */; };
+		46EB2E00000490 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000200 /* OptionalExtensions.swift */; };
+		46EB2E000004A0 /* RandomAccessCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000210 /* RandomAccessCollectionExtensions.swift */; };
+		46EB2E000004B0 /* RangeReplaceableCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000220 /* RangeReplaceableCollectionExtensions.swift */; };
+		46EB2E000004C0 /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000230 /* SequenceExtensions.swift */; };
+		46EB2E000004D0 /* SignedIntegerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000240 /* SignedIntegerExtensions.swift */; };
+		46EB2E000004E0 /* SignedNumericExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000250 /* SignedNumericExtensions.swift */; };
+		46EB2E000004F0 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000260 /* StringExtensions.swift */; };
+		46EB2E00000500 /* StringProtocolExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000270 /* StringProtocolExtensions.swift */; };
+		46EB2E00000560 /* SwifterSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000550 /* SwifterSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E000005A0 /* SwifterSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000590 /* SwifterSwift-dummy.m */; };
+		46EB2E000006B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00000360 /* Foundation.framework */; };
+		46EB2E00000720 /* Pods-KaMPKitiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00000710 /* Pods-KaMPKitiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46EB2E00000770 /* Pods-KaMPKitiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00000760 /* Pods-KaMPKitiOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46EB2E000007E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E00000000 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
-			remoteInfo = SwiftLint;
-		};
-		46EB2E00000800 /* PBXContainerItemProxy */ = {
+		46EB2E00000790 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 5D8BB851D938AE8F1A461F95C1ABD69B;
 			remoteInfo = SwifterSwift;
 		};
-		46EB2E00000820 /* PBXContainerItemProxy */ = {
+		46EB2E000007B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
@@ -87,70 +71,71 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		46EB2E000000E0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E00000100 /* ColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Sources/SwifterSwift/Shared/ColorExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000110 /* EdgeInsetsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsetsExtensions.swift; path = Sources/SwifterSwift/Shared/EdgeInsetsExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000120 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000130 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000140 /* BinaryFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000150 /* BoolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000160 /* CharacterExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CharacterExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000170 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000180 /* ComparableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComparableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ComparableExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000190 /* DecodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DecodableExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001A0 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DictionaryExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001B0 /* DoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DoubleExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001C0 /* FloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001D0 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001E0 /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000001F0 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000200 /* MutableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/MutableCollectionExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000210 /* OptionalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/OptionalExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000220 /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000230 /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000240 /* SequenceExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SequenceExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000250 /* SignedIntegerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedIntegerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedIntegerExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000260 /* SignedNumericExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedNumericExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedNumericExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000270 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringExtensions.swift; sourceTree = "<group>"; };
-		46EB2E00000280 /* StringProtocolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringProtocolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringProtocolExtensions.swift; sourceTree = "<group>"; };
-		46EB2E000002A0 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
-		46EB2E000002C0 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		46EB2E00000320 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
-		46EB2E000003D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		46EB2E00000590 /* SwifterSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwifterSwift.xcconfig; sourceTree = "<group>"; };
-		46EB2E000005A0 /* SwifterSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwifterSwift.modulemap; sourceTree = "<group>"; };
-		46EB2E000005B0 /* SwifterSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E000005D0 /* SwifterSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwifterSwift-Info.plist"; sourceTree = "<group>"; };
-		46EB2E000005E0 /* SwifterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-prefix.pch"; sourceTree = "<group>"; };
-		46EB2E000005F0 /* SwifterSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwifterSwift-dummy.m"; sourceTree = "<group>"; };
-		46EB2E00000660 /* shared.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.xcconfig; sourceTree = "<group>"; };
-		46EB2E00000720 /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00000730 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		46EB2E00000740 /* Pods-KaMPKitiOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOS-Info.plist"; sourceTree = "<group>"; };
-		46EB2E00000750 /* Pods-KaMPKitiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KaMPKitiOS.modulemap"; sourceTree = "<group>"; };
-		46EB2E00000760 /* Pods-KaMPKitiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KaMPKitiOS-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E00000780 /* Pods-KaMPKitiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KaMPKitiOS-frameworks.sh"; sourceTree = "<group>"; };
-		46EB2E00000790 /* Pods-KaMPKitiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E000007A0 /* Pods-KaMPKitiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KaMPKitiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E000007B0 /* Pods-KaMPKitiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KaMPKitiOS-dummy.m"; sourceTree = "<group>"; };
-		4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods_KaMPKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_KaMPKitiOS.framework; path = "Pods-KaMPKitiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift.framework; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E000000D0 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E000000F0 /* ColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtensions.swift; path = Sources/SwifterSwift/Shared/ColorExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000100 /* EdgeInsetsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeInsetsExtensions.swift; path = Sources/SwifterSwift/Shared/EdgeInsetsExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000110 /* ArrayExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000120 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000130 /* BinaryFloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryFloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000140 /* BoolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000150 /* CharacterExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CharacterExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CharacterExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000160 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000170 /* ComparableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComparableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/ComparableExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000180 /* DecodableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DecodableExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DecodableExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000190 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DictionaryExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001A0 /* DoubleExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/DoubleExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001B0 /* FloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001C0 /* FloatingPointExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatingPointExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001D0 /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001E0 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
+		46EB2E000001F0 /* MutableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MutableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/MutableCollectionExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000200 /* OptionalExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/OptionalExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000210 /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000220 /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000230 /* SequenceExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SequenceExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000240 /* SignedIntegerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedIntegerExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedIntegerExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000250 /* SignedNumericExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SignedNumericExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/SignedNumericExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000260 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000270 /* StringProtocolExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringProtocolExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/StringProtocolExtensions.swift; sourceTree = "<group>"; };
+		46EB2E00000290 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = build/cocoapods/framework/shared.framework; sourceTree = "<group>"; };
+		46EB2E000002B0 /* shared.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = shared.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		46EB2E00000360 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		46EB2E00000520 /* SwifterSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwifterSwift.debug.xcconfig; sourceTree = "<group>"; };
+		46EB2E00000530 /* SwifterSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwifterSwift.release.xcconfig; sourceTree = "<group>"; };
+		46EB2E00000540 /* SwifterSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwifterSwift.modulemap; sourceTree = "<group>"; };
+		46EB2E00000550 /* SwifterSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000570 /* SwifterSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwifterSwift-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000580 /* SwifterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-prefix.pch"; sourceTree = "<group>"; };
+		46EB2E00000590 /* SwifterSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwifterSwift-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00000600 /* shared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.debug.xcconfig; sourceTree = "<group>"; };
+		46EB2E00000610 /* shared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = shared.release.xcconfig; sourceTree = "<group>"; };
+		46EB2E000006D0 /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000006E0 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		46EB2E000006F0 /* Pods-KaMPKitiOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOS-Info.plist"; sourceTree = "<group>"; };
+		46EB2E00000700 /* Pods-KaMPKitiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KaMPKitiOS.modulemap"; sourceTree = "<group>"; };
+		46EB2E00000710 /* Pods-KaMPKitiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KaMPKitiOS-umbrella.h"; sourceTree = "<group>"; };
+		46EB2E00000730 /* Pods-KaMPKitiOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KaMPKitiOS-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E00000740 /* Pods-KaMPKitiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KaMPKitiOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00000750 /* Pods-KaMPKitiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KaMPKitiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00000760 /* Pods-KaMPKitiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KaMPKitiOS-dummy.m"; sourceTree = "<group>"; };
+		4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods-KaMPKitiOS */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KaMPKitiOS"; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		46EB2E000003A0 /* Frameworks */ = {
+		46EB2E00000330 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000003E0 /* Foundation.framework in Frameworks */,
+				46EB2E00000370 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E000006E0 /* Frameworks */ = {
+		46EB2E00000690 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000700 /* Foundation.framework in Frameworks */,
+				46EB2E000006B0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +145,7 @@
 		46EB2E00000010 = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000E0 /* Podfile */,
+				46EB2E000000D0 /* Podfile */,
 				46EB2E00000090 /* Development Pods */,
 				46EB2E00000060 /* Frameworks */,
 				46EB2E00000080 /* Pods */,
@@ -172,8 +157,8 @@
 		46EB2E00000020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods_KaMPKitiOS.framework */,
-				8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */,
+				4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods-KaMPKitiOS */,
+				8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,7 +166,7 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000003C0 /* iOS */,
+				46EB2E00000350 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,7 +174,7 @@
 		46EB2E00000070 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000710 /* Pods-KaMPKitiOS */,
+				46EB2E000006C0 /* Pods-KaMPKitiOS */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -197,8 +182,7 @@
 		46EB2E00000080 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000C0 /* SwifterSwift */,
-				46EB2E000000B0 /* SwiftLint */,
+				46EB2E000000B0 /* SwifterSwift */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -206,141 +190,125 @@
 		46EB2E00000090 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000000D0 /* shared */,
+				46EB2E000000C0 /* shared */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		46EB2E000000B0 /* SwiftLint */ = {
+		46EB2E000000B0 /* SwifterSwift */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000310 /* Support Files */,
-			);
-			name = SwiftLint;
-			path = SwiftLint;
-			sourceTree = "<group>";
-		};
-		46EB2E000000C0 /* SwifterSwift */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E00000580 /* Support Files */,
-				46EB2E000000F0 /* SwiftStdlib */,
+				46EB2E00000510 /* Support Files */,
+				46EB2E000000E0 /* SwiftStdlib */,
 			);
 			name = SwifterSwift;
 			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
-		46EB2E000000D0 /* shared */ = {
+		46EB2E000000C0 /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000290 /* Frameworks */,
-				46EB2E000002B0 /* Pod */,
-				46EB2E00000650 /* Support Files */,
+				46EB2E00000280 /* Frameworks */,
+				46EB2E000002A0 /* Pod */,
+				46EB2E000005F0 /* Support Files */,
 			);
 			name = shared;
 			path = ../../shared;
 			sourceTree = "<group>";
 		};
-		46EB2E000000F0 /* SwiftStdlib */ = {
+		46EB2E000000E0 /* SwiftStdlib */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000120 /* ArrayExtensions.swift */,
-				46EB2E00000130 /* BidirectionalCollectionExtensions.swift */,
-				46EB2E00000140 /* BinaryFloatingPointExtensions.swift */,
-				46EB2E00000150 /* BoolExtensions.swift */,
-				46EB2E00000160 /* CharacterExtensions.swift */,
-				46EB2E00000170 /* CollectionExtensions.swift */,
-				46EB2E00000100 /* ColorExtensions.swift */,
-				46EB2E00000180 /* ComparableExtensions.swift */,
-				46EB2E00000190 /* DecodableExtensions.swift */,
-				46EB2E000001A0 /* DictionaryExtensions.swift */,
-				46EB2E000001B0 /* DoubleExtensions.swift */,
-				46EB2E00000110 /* EdgeInsetsExtensions.swift */,
-				46EB2E000001C0 /* FloatExtensions.swift */,
-				46EB2E000001D0 /* FloatingPointExtensions.swift */,
-				46EB2E000001E0 /* IntExtensions.swift */,
-				46EB2E000001F0 /* KeyedDecodingContainerExtensions.swift */,
-				46EB2E00000200 /* MutableCollectionExtensions.swift */,
-				46EB2E00000210 /* OptionalExtensions.swift */,
-				46EB2E00000220 /* RandomAccessCollectionExtensions.swift */,
-				46EB2E00000230 /* RangeReplaceableCollectionExtensions.swift */,
-				46EB2E00000240 /* SequenceExtensions.swift */,
-				46EB2E00000250 /* SignedIntegerExtensions.swift */,
-				46EB2E00000260 /* SignedNumericExtensions.swift */,
-				46EB2E00000270 /* StringExtensions.swift */,
-				46EB2E00000280 /* StringProtocolExtensions.swift */,
+				46EB2E00000110 /* ArrayExtensions.swift */,
+				46EB2E00000120 /* BidirectionalCollectionExtensions.swift */,
+				46EB2E00000130 /* BinaryFloatingPointExtensions.swift */,
+				46EB2E00000140 /* BoolExtensions.swift */,
+				46EB2E00000150 /* CharacterExtensions.swift */,
+				46EB2E00000160 /* CollectionExtensions.swift */,
+				46EB2E000000F0 /* ColorExtensions.swift */,
+				46EB2E00000170 /* ComparableExtensions.swift */,
+				46EB2E00000180 /* DecodableExtensions.swift */,
+				46EB2E00000190 /* DictionaryExtensions.swift */,
+				46EB2E000001A0 /* DoubleExtensions.swift */,
+				46EB2E00000100 /* EdgeInsetsExtensions.swift */,
+				46EB2E000001B0 /* FloatExtensions.swift */,
+				46EB2E000001C0 /* FloatingPointExtensions.swift */,
+				46EB2E000001D0 /* IntExtensions.swift */,
+				46EB2E000001E0 /* KeyedDecodingContainerExtensions.swift */,
+				46EB2E000001F0 /* MutableCollectionExtensions.swift */,
+				46EB2E00000200 /* OptionalExtensions.swift */,
+				46EB2E00000210 /* RandomAccessCollectionExtensions.swift */,
+				46EB2E00000220 /* RangeReplaceableCollectionExtensions.swift */,
+				46EB2E00000230 /* SequenceExtensions.swift */,
+				46EB2E00000240 /* SignedIntegerExtensions.swift */,
+				46EB2E00000250 /* SignedNumericExtensions.swift */,
+				46EB2E00000260 /* StringExtensions.swift */,
+				46EB2E00000270 /* StringProtocolExtensions.swift */,
 			);
 			name = SwiftStdlib;
 			sourceTree = "<group>";
 		};
-		46EB2E00000290 /* Frameworks */ = {
+		46EB2E00000280 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000002A0 /* shared.framework */,
+				46EB2E00000290 /* shared.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		46EB2E000002B0 /* Pod */ = {
+		46EB2E000002A0 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000002C0 /* shared.podspec */,
+				46EB2E000002B0 /* shared.podspec */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		46EB2E00000310 /* Support Files */ = {
+		46EB2E00000350 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000320 /* SwiftLint.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftLint";
-			sourceTree = "<group>";
-		};
-		46EB2E000003C0 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				46EB2E000003D0 /* Foundation.framework */,
+				46EB2E00000360 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		46EB2E00000580 /* Support Files */ = {
+		46EB2E00000510 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E000005A0 /* SwifterSwift.modulemap */,
-				46EB2E00000590 /* SwifterSwift.xcconfig */,
-				46EB2E000005F0 /* SwifterSwift-dummy.m */,
-				46EB2E000005D0 /* SwifterSwift-Info.plist */,
-				46EB2E000005E0 /* SwifterSwift-prefix.pch */,
-				46EB2E000005B0 /* SwifterSwift-umbrella.h */,
+				46EB2E00000540 /* SwifterSwift.modulemap */,
+				46EB2E00000590 /* SwifterSwift-dummy.m */,
+				46EB2E00000570 /* SwifterSwift-Info.plist */,
+				46EB2E00000580 /* SwifterSwift-prefix.pch */,
+				46EB2E00000550 /* SwifterSwift-umbrella.h */,
+				46EB2E00000520 /* SwifterSwift.debug.xcconfig */,
+				46EB2E00000530 /* SwifterSwift.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwifterSwift";
 			sourceTree = "<group>";
 		};
-		46EB2E00000650 /* Support Files */ = {
+		46EB2E000005F0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000660 /* shared.xcconfig */,
+				46EB2E00000600 /* shared.debug.xcconfig */,
+				46EB2E00000610 /* shared.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../ios/Pods/Target Support Files/shared";
 			sourceTree = "<group>";
 		};
-		46EB2E00000710 /* Pods-KaMPKitiOS */ = {
+		46EB2E000006C0 /* Pods-KaMPKitiOS */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00000750 /* Pods-KaMPKitiOS.modulemap */,
-				46EB2E000007A0 /* Pods-KaMPKitiOS-acknowledgements.markdown */,
-				46EB2E00000790 /* Pods-KaMPKitiOS-acknowledgements.plist */,
-				46EB2E000007B0 /* Pods-KaMPKitiOS-dummy.m */,
-				46EB2E00000780 /* Pods-KaMPKitiOS-frameworks.sh */,
-				46EB2E00000740 /* Pods-KaMPKitiOS-Info.plist */,
-				46EB2E00000760 /* Pods-KaMPKitiOS-umbrella.h */,
-				46EB2E00000730 /* Pods-KaMPKitiOS.debug.xcconfig */,
-				46EB2E00000720 /* Pods-KaMPKitiOS.release.xcconfig */,
+				46EB2E00000700 /* Pods-KaMPKitiOS.modulemap */,
+				46EB2E00000750 /* Pods-KaMPKitiOS-acknowledgements.markdown */,
+				46EB2E00000740 /* Pods-KaMPKitiOS-acknowledgements.plist */,
+				46EB2E00000760 /* Pods-KaMPKitiOS-dummy.m */,
+				46EB2E00000730 /* Pods-KaMPKitiOS-frameworks.sh */,
+				46EB2E000006F0 /* Pods-KaMPKitiOS-Info.plist */,
+				46EB2E00000710 /* Pods-KaMPKitiOS-umbrella.h */,
+				46EB2E000006E0 /* Pods-KaMPKitiOS.debug.xcconfig */,
+				46EB2E000006D0 /* Pods-KaMPKitiOS.release.xcconfig */,
 			);
 			name = "Pods-KaMPKitiOS";
 			path = "Target Support Files/Pods-KaMPKitiOS";
@@ -349,19 +317,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		46EB2E00000380 /* Headers */ = {
+		46EB2E00000310 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000005C0 /* SwifterSwift-umbrella.h in Headers */,
+				46EB2E00000560 /* SwifterSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E000006C0 /* Headers */ = {
+		46EB2E00000670 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000770 /* Pods-KaMPKitiOS-umbrella.h in Headers */,
+				46EB2E00000720 /* Pods-KaMPKitiOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +338,12 @@
 /* Begin PBXNativeTarget section */
 		5D8BB851D938AE8F1A461F95C1ABD69B /* SwifterSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00000340 /* Build configuration list for PBXNativeTarget "SwifterSwift" */;
+			buildConfigurationList = 46EB2E000002D0 /* Build configuration list for PBXNativeTarget "SwifterSwift" */;
 			buildPhases = (
-				46EB2E00000380 /* Headers */,
-				46EB2E00000390 /* Sources */,
-				46EB2E000003A0 /* Frameworks */,
-				46EB2E000003B0 /* Resources */,
+				46EB2E00000310 /* Headers */,
+				46EB2E00000320 /* Sources */,
+				46EB2E00000330 /* Frameworks */,
+				46EB2E00000340 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -383,28 +351,27 @@
 			);
 			name = SwifterSwift;
 			productName = SwifterSwift;
-			productReference = 8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */;
+			productReference = 8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 		FA6E46E8E7462D72AFBDCEA698D24977 /* Pods-KaMPKitiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46EB2E00000680 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOS" */;
+			buildConfigurationList = 46EB2E00000630 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOS" */;
 			buildPhases = (
-				46EB2E000006C0 /* Headers */,
-				46EB2E000006D0 /* Sources */,
-				46EB2E000006E0 /* Frameworks */,
-				46EB2E000006F0 /* Resources */,
+				46EB2E00000670 /* Headers */,
+				46EB2E00000680 /* Sources */,
+				46EB2E00000690 /* Frameworks */,
+				46EB2E000006A0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E000007F0 /* PBXTargetDependency */,
-				46EB2E00000810 /* PBXTargetDependency */,
-				46EB2E00000830 /* PBXTargetDependency */,
+				46EB2E000007A0 /* PBXTargetDependency */,
+				46EB2E000007C0 /* PBXTargetDependency */,
 			);
 			name = "Pods-KaMPKitiOS";
-			productName = "Pods-KaMPKitiOS";
-			productReference = 4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods_KaMPKitiOS.framework */;
+			productName = Pods_KaMPKitiOS;
+			productReference = 4EDB9C40CD3583B30579DB2BE865F1D3 /* Pods-KaMPKitiOS */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -421,8 +388,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 46EB2E00000010;
 			productRefGroup = 46EB2E00000020 /* Products */;
@@ -432,20 +399,19 @@
 				FA6E46E8E7462D72AFBDCEA698D24977 /* Pods-KaMPKitiOS */,
 				8777C9F6889E59EFFD631D80AEE9048B /* shared */,
 				5D8BB851D938AE8F1A461F95C1ABD69B /* SwifterSwift */,
-				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		46EB2E000003B0 /* Resources */ = {
+		46EB2E00000340 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E000006F0 /* Resources */ = {
+		46EB2E000006A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -455,7 +421,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		46EB2E000007D0 /* [CP-User] Build shared */ = {
+		46EB2E00000780 /* [CP-User] Build shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -463,72 +429,66 @@
 			name = "[CP-User] Build shared";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "                if [ \"YES\" = \"$COCOAPODS_SKIP_KOTLIN_BUILD\" ]; then\n                  echo \"Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION                     -Pkotlin.native.cocoapods.cflags=\"$OTHER_CFLAGS\"                     -Pkotlin.native.cocoapods.paths.headers=\"$HEADER_SEARCH_PATHS\"                     -Pkotlin.native.cocoapods.paths.frameworks=\"$FRAMEWORK_SEARCH_PATHS\"\n";
+			shellScript = "                if [ \"YES\" = \"$COCOAPODS_SKIP_KOTLIN_BUILD\" ]; then\n                  echo \"Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=$CONFIGURATION\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46EB2E00000390 /* Sources */ = {
+		46EB2E00000320 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00000410 /* ArrayExtensions.swift in Sources */,
-				46EB2E00000420 /* BidirectionalCollectionExtensions.swift in Sources */,
-				46EB2E00000430 /* BinaryFloatingPointExtensions.swift in Sources */,
-				46EB2E00000440 /* BoolExtensions.swift in Sources */,
-				46EB2E00000450 /* CharacterExtensions.swift in Sources */,
-				46EB2E00000460 /* CollectionExtensions.swift in Sources */,
-				46EB2E000003F0 /* ColorExtensions.swift in Sources */,
-				46EB2E00000470 /* ComparableExtensions.swift in Sources */,
-				46EB2E00000480 /* DecodableExtensions.swift in Sources */,
-				46EB2E00000490 /* DictionaryExtensions.swift in Sources */,
-				46EB2E000004A0 /* DoubleExtensions.swift in Sources */,
-				46EB2E00000400 /* EdgeInsetsExtensions.swift in Sources */,
-				46EB2E000004B0 /* FloatExtensions.swift in Sources */,
-				46EB2E000004C0 /* FloatingPointExtensions.swift in Sources */,
-				46EB2E000004D0 /* IntExtensions.swift in Sources */,
-				46EB2E000004E0 /* KeyedDecodingContainerExtensions.swift in Sources */,
-				46EB2E000004F0 /* MutableCollectionExtensions.swift in Sources */,
-				46EB2E00000500 /* OptionalExtensions.swift in Sources */,
-				46EB2E00000510 /* RandomAccessCollectionExtensions.swift in Sources */,
-				46EB2E00000520 /* RangeReplaceableCollectionExtensions.swift in Sources */,
-				46EB2E00000530 /* SequenceExtensions.swift in Sources */,
-				46EB2E00000540 /* SignedIntegerExtensions.swift in Sources */,
-				46EB2E00000550 /* SignedNumericExtensions.swift in Sources */,
-				46EB2E00000560 /* StringExtensions.swift in Sources */,
-				46EB2E00000570 /* StringProtocolExtensions.swift in Sources */,
-				46EB2E00000600 /* SwifterSwift-dummy.m in Sources */,
+				46EB2E000003A0 /* ArrayExtensions.swift in Sources */,
+				46EB2E000003B0 /* BidirectionalCollectionExtensions.swift in Sources */,
+				46EB2E000003C0 /* BinaryFloatingPointExtensions.swift in Sources */,
+				46EB2E000003D0 /* BoolExtensions.swift in Sources */,
+				46EB2E000003E0 /* CharacterExtensions.swift in Sources */,
+				46EB2E000003F0 /* CollectionExtensions.swift in Sources */,
+				46EB2E00000380 /* ColorExtensions.swift in Sources */,
+				46EB2E00000400 /* ComparableExtensions.swift in Sources */,
+				46EB2E00000410 /* DecodableExtensions.swift in Sources */,
+				46EB2E00000420 /* DictionaryExtensions.swift in Sources */,
+				46EB2E00000430 /* DoubleExtensions.swift in Sources */,
+				46EB2E00000390 /* EdgeInsetsExtensions.swift in Sources */,
+				46EB2E00000440 /* FloatExtensions.swift in Sources */,
+				46EB2E00000450 /* FloatingPointExtensions.swift in Sources */,
+				46EB2E00000460 /* IntExtensions.swift in Sources */,
+				46EB2E00000470 /* KeyedDecodingContainerExtensions.swift in Sources */,
+				46EB2E00000480 /* MutableCollectionExtensions.swift in Sources */,
+				46EB2E00000490 /* OptionalExtensions.swift in Sources */,
+				46EB2E000004A0 /* RandomAccessCollectionExtensions.swift in Sources */,
+				46EB2E000004B0 /* RangeReplaceableCollectionExtensions.swift in Sources */,
+				46EB2E000004C0 /* SequenceExtensions.swift in Sources */,
+				46EB2E000004D0 /* SignedIntegerExtensions.swift in Sources */,
+				46EB2E000004E0 /* SignedNumericExtensions.swift in Sources */,
+				46EB2E000004F0 /* StringExtensions.swift in Sources */,
+				46EB2E00000500 /* StringProtocolExtensions.swift in Sources */,
+				46EB2E000005A0 /* SwifterSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46EB2E000006D0 /* Sources */ = {
+		46EB2E00000680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E000007C0 /* Pods-KaMPKitiOS-dummy.m in Sources */,
+				46EB2E00000770 /* Pods-KaMPKitiOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46EB2E000007F0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftLint;
-			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
-			targetProxy = 46EB2E000007E0 /* PBXContainerItemProxy */;
-		};
-		46EB2E00000810 /* PBXTargetDependency */ = {
+		46EB2E000007A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwifterSwift;
 			target = 5D8BB851D938AE8F1A461F95C1ABD69B /* SwifterSwift */;
-			targetProxy = 46EB2E00000800 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00000790 /* PBXContainerItemProxy */;
 		};
-		46EB2E00000830 /* PBXTargetDependency */ = {
+		46EB2E000007C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = shared;
 			target = 8777C9F6889E59EFFD631D80AEE9048B /* shared */;
-			targetProxy = 46EB2E00000820 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000007B0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -537,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -602,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -659,42 +621,9 @@
 			};
 			name = Release;
 		};
-		46EB2E000002F0 /* Release */ = {
+		46EB2E000002E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000320 /* SwiftLint.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		46EB2E00000300 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000320 /* SwiftLint.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		46EB2E00000350 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000590 /* SwifterSwift.xcconfig */;
+			baseConfigurationReference = 46EB2E00000530 /* SwifterSwift.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -728,9 +657,9 @@
 			};
 			name = Release;
 		};
-		46EB2E00000360 /* Debug */ = {
+		46EB2E000002F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000590 /* SwifterSwift.xcconfig */;
+			baseConfigurationReference = 46EB2E00000520 /* SwifterSwift.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -763,9 +692,9 @@
 			};
 			name = Debug;
 		};
-		46EB2E00000630 /* Release */ = {
+		46EB2E000005D0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000660 /* shared.xcconfig */;
+			baseConfigurationReference = 46EB2E00000610 /* shared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -781,9 +710,9 @@
 			};
 			name = Release;
 		};
-		46EB2E00000640 /* Debug */ = {
+		46EB2E000005E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000660 /* shared.xcconfig */;
+			baseConfigurationReference = 46EB2E00000600 /* shared.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -798,9 +727,9 @@
 			};
 			name = Debug;
 		};
-		46EB2E00000690 /* Release */ = {
+		46EB2E00000640 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000720 /* Pods-KaMPKitiOS.release.xcconfig */;
+			baseConfigurationReference = 46EB2E000006D0 /* Pods-KaMPKitiOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -836,9 +765,9 @@
 			};
 			name = Release;
 		};
-		46EB2E000006A0 /* Debug */ = {
+		46EB2E00000650 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46EB2E00000730 /* Pods-KaMPKitiOS.debug.xcconfig */;
+			baseConfigurationReference = 46EB2E000006E0 /* Pods-KaMPKitiOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -885,38 +814,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E000002E0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+		46EB2E000002D0 /* Build configuration list for PBXNativeTarget "SwifterSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E00000300 /* Debug */,
-				46EB2E000002F0 /* Release */,
+				46EB2E000002F0 /* Debug */,
+				46EB2E000002E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00000340 /* Build configuration list for PBXNativeTarget "SwifterSwift" */ = {
+		46EB2E000005C0 /* Build configuration list for PBXAggregateTarget "shared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E00000360 /* Debug */,
-				46EB2E00000350 /* Release */,
+				46EB2E000005E0 /* Debug */,
+				46EB2E000005D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EB2E00000620 /* Build configuration list for PBXAggregateTarget "shared" */ = {
+		46EB2E00000630 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46EB2E00000640 /* Debug */,
-				46EB2E00000630 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		46EB2E00000680 /* Build configuration list for PBXNativeTarget "Pods-KaMPKitiOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46EB2E000006A0 /* Debug */,
-				46EB2E00000690 /* Release */,
+				46EB2E00000650 /* Debug */,
+				46EB2E00000640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
