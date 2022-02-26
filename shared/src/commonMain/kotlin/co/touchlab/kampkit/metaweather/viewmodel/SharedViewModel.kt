@@ -12,7 +12,7 @@ import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.reduce
 import org.orbitmvi.orbit.viewmodel.container
 
-class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ContainerHost<ViewState, String>, KoinComponent, ViewModel(){
+class SharedViewModel(private val weatherUseCase: WeatherUseCase) : ContainerHost<ViewState, String>, KoinComponent, ViewModel() {
 
     override val container: Container<ViewState, String> = container(ViewState())
 
