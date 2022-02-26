@@ -5,18 +5,17 @@ targetSdk = "31"
 compileSdk = "31"
 
 # Dependencies
-compose = "1.0.4"
+compose = "1.1.1"
 coroutines-native = "1.5.2-native-mt"
 multiplatformSettings = "0.8.1"
 koin = "3.1.4"
-kotlin = "1.5.31"
+kotlin = "1.6.10"
 ktor = "1.6.5"
 lifecycle = "2.4.0-rc01"
 livedata = "2.4.0"
-orbit = "4.3.0"
-orbitcore = "3.1.1"
+orbit = "4.3.2"
 sqlDelight = "1.5.3"
-moko = "0.11.0"
+moko = "0.12.0"
 
 [libraries]
 
@@ -46,7 +45,6 @@ google-accompanist-swipeRefresh = { module = "com.google.accompanist:accompanist
 
 gradlePlugin-android = { module = "com.android.tools.build:gradle", version = "7.0.3" }
 gradlePlugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
-gradlePlugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "10.2.0" }
 gradlePlugin-sqlDelight = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
 
 junit = { module = "junit:junit", version = "4.13.2" }
@@ -93,7 +91,6 @@ app-ui = [
 gradlePlugins = [
     "gradlePlugin-android",
     "gradlePlugin-kotlinSerialization",
-    "gradlePlugin-ktlint",
     "gradlePlugin-sqlDelight",
 ]
 ktor-common = ["ktor-client-core", "ktor-client-logging", "ktor-client-serialization"]

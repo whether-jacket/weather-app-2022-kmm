@@ -1,27 +1,23 @@
 PODS:
   - shared (1.1)
   - SwifterSwift/SwiftStdlib (5.2.0)
-  - SwiftLint (0.41.0)
 
 DEPENDENCIES:
   - shared (from `../shared/`)
-  - SwifterSwift/SwiftStdlib
-  - SwiftLint
+  - SwifterSwift/SwiftStdlib (~> 5.2.0)
 
 SPEC REPOS:
   trunk:
     - SwifterSwift
-    - SwiftLint
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared/"
 
 SPEC CHECKSUMS:
-  shared: 7d8e7565a769611b43b76c7dc035d72863f4a8f0
+  shared: 65fe35d4f6b45d928b59427bca1405c37d1e8ba5
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
-  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
 
-PODFILE CHECKSUM: e1b0bd831d71becf18562ed52f310e42648d0a99
+PODFILE CHECKSUM: e40728863082dad8310bfbc0f70264f036b77b5f
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.11.2
