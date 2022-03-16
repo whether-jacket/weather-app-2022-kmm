@@ -2,9 +2,10 @@ use_frameworks!
 
 platform :ios, '12.4'
 
-install! 'cocoapods', :deterministic_uuids => false
+install! 'cocoapods', :deterministic_uuids => false, :disable_input_output_paths => true
 
 target 'KaMPKitiOS' do
     pod 'shared', :path => '../shared/'
+    pod 'sharedOrbitSwift', :path => '../shared'
     pod 'SwifterSwift/SwiftStdlib', '~> 5.2.0' # Standard Library Extensions
 end
