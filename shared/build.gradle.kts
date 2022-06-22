@@ -66,6 +66,10 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
+                implementation(libs.ballast.core)
+                implementation(libs.ballast.saved.state)
+                implementation(libs.ballast.repository)
+                implementation(libs.ballast.debugger)
             }
         }
         val commonTest by getting {
