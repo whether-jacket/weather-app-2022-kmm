@@ -25,7 +25,7 @@ jobs:
           java-version: "11"
 
       - name: Build
-        uses: sersoft-gmbh/xcodebuild-action@v1
+        uses: sersoft-gmbh/xcodebuild-action@v2
         with:
           workspace: ios/KaMPKitiOS.xcworkspace
           scheme: KaMPKitiOS
