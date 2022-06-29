@@ -9,12 +9,16 @@ class WeatherReportSavedStateAdapter :
     SavedStateAdapter<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState> {
     override suspend fun RestoreStateScope<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState>.restore():
         WeatherReportContract.ViewState {
-        return WeatherReportContract.ViewState()
+        return WeatherReportContract.ViewState(isLoading = false, errorMessage = "")
     }
 
     override suspend fun SaveStateScope<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState>.save() {
-        saveDiff({this.weatherReport}){ weatherReport ->
-            WeatherReportContract.ViewState(weatherReport = weatherReport)
+        saveDiff({ this }) { viewState ->
+            WeatherReportContract.ViewState(
+                weatherReport = viewState.weatherReport,
+                isLoading = viewState.isLoading,
+                errorMessage = viewState.errorMessage
+            )
         }
     }
 }

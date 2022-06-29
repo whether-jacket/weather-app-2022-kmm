@@ -9,11 +9,6 @@ class WeatherReportEventHandler(
 
     override suspend fun EventHandlerScope<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState>.handleEvent(
         event: WeatherReportContract.Events
-    ) = when (event) {
-        is WeatherReportContract.Events.ShowErrorMessage -> {
-            displayErrorMessage(event.errorMessage)
-        }
-        is WeatherReportContract.Events.ShowLoadingScreen -> {
-        }
+    ) {
     }
 }

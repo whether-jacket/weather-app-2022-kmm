@@ -3,41 +3,33 @@ package co.touchlab.kampkit.android.landingpage.view
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import co.touchlab.kampkit.WeatherReportViewModel
 import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
 import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
 import co.touchlab.kampkit.injectLogger
+import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
 import co.touchlab.kermit.Logger
-import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
-import co.touchlab.kampkit.metaweather.viewmodel.ViewState
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
-import org.orbitmvi.orbit.viewmodel.observe
 
 class LandingPageActivity : ComponentActivity(), KoinComponent {
 
     private val log: Logger by injectLogger(LandingPageActivity::class.toString())
-    private val viewModel: SharedViewModel by viewModel()
+    private val viewModel: WeatherReportViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.observe(
-            state = ::render,
-            sideEffect = ::handleSideEffect,
-            lifecycleOwner = this@LandingPageActivity
-        )
-    }
-
-    private fun render(viewState: ViewState) {
+        viewModel.trySend(WeatherReportContract.Inputs.GetWeatherReport)
         setContent {
-            if (viewState.isInProgress) {
+            val vmState by viewModel.observeStates().collectAsState()
+            if(
+                vmState.isLoading
+            ){
                 LoadingScreen()
-            } else {
-                WeatherReportView(weatherReport = viewState.weatherReport, errorMessage = viewState.errorMessage)
             }
+            WeatherReportView(weatherReport = vmState.weatherReport, errorMessage = vmState.errorMessage)
         }
-    }
-
-    private fun handleSideEffect(text: String) {
-        log.i(text)
     }
 }

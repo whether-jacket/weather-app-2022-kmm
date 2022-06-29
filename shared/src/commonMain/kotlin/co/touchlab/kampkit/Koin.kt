@@ -7,6 +7,9 @@ import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
+import com.copperleaf.ballast.BallastViewModelConfiguration
+import com.copperleaf.ballast.core.LoggingInterceptor
+import com.copperleaf.ballast.plusAssign
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
@@ -50,6 +53,12 @@ private val coreModule = module {
     }
     factory<WeatherRepo> { WeatherRepo() }
     factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
+    factory<BallastViewModelConfiguration.Builder> {
+        BallastViewModelConfiguration.Builder()
+            .apply {
+                this += LoggingInterceptor()
+            }
+    }
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,

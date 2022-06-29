@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.util.Log
 import co.touchlab.kampkit.AppInfo
 import co.touchlab.kampkit.android.BuildConfig.APPLICATION_ID
-import co.touchlab.kampkit.metaweather.viewmodel.SharedViewModel
 import co.touchlab.kampkit.initKoin
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -19,7 +18,6 @@ class MainApp : Application() {
         initKoin(
             module {
                 single<Context> { this@MainApp }
-                viewModel { SharedViewModel(get<WeatherUseCase>()) }
                 single<SharedPreferences> {
                     get<Context>().getSharedPreferences("KAMPSTARTER_SETTINGS", Context.MODE_PRIVATE)
                 }

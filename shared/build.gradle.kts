@@ -59,6 +59,8 @@ kotlin {
                 api(libs.touchlab.kermit)
                 api(libs.orbit.mvi.core)
                 api(libs.icerock.moko.mvvm.core)
+                api(libs.ballast.core)
+                api(libs.ballast.repository)
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
                 implementation(libs.sqlDelight.coroutinesExt)
@@ -66,9 +68,7 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
-                implementation(libs.ballast.core)
                 implementation(libs.ballast.saved.state)
-                implementation(libs.ballast.repository)
                 implementation(libs.ballast.debugger)
             }
         }
