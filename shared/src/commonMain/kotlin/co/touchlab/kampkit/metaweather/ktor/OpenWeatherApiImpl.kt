@@ -1,6 +1,7 @@
 package co.touchlab.kampkit.metaweather.ktor
 
 import co.touchlab.kampkit.metaweather.model.WeatherForLocation
+import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
 import io.ktor.client.HttpClient
 import io.ktor.client.features.HttpTimeout
 import io.ktor.client.features.json.JsonFeature
@@ -12,7 +13,7 @@ import io.ktor.client.features.logging.Logging
 import io.ktor.client.request.get
 import kotlinx.serialization.json.Json
 
-class MetaWeatherApiImpl : MetaWeatherApi {
+class OpenWeatherApiImpl : OpenWeatherApi {
 
     private val client = HttpClient {
         install(JsonFeature) {
@@ -35,7 +36,7 @@ class MetaWeatherApiImpl : MetaWeatherApi {
         }
     }
 
-    override suspend fun getWeatherFromApi(): WeatherForLocation {
-        return client.get(MetaWeatherApi.COMPLETE_URL)
+    override suspend fun getWeatherFromApi(): WeatherForCity {
+        return client.get(OpenWeatherApi.COMPLETE_URL)
     }
 }

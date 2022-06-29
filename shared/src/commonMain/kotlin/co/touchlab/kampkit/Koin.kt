@@ -1,7 +1,7 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
-import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
+import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApi
+import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
@@ -45,8 +45,8 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
-    single<MetaWeatherApi> {
-        MetaWeatherApiImpl()
+    single<OpenWeatherApi> {
+        OpenWeatherApiImpl()
     }
     single<Clock> {
         Clock.System

@@ -24,9 +24,7 @@ class LandingPageActivity : ComponentActivity(), KoinComponent {
         viewModel.trySend(WeatherReportContract.Inputs.GetWeatherReport)
         setContent {
             val vmState by viewModel.observeStates().collectAsState()
-            if(
-                vmState.isLoading
-            ){
+            if(vmState.isLoading){
                 LoadingScreen()
             }
             WeatherReportView(weatherReport = vmState.weatherReport, errorMessage = vmState.errorMessage)

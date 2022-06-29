@@ -21,6 +21,7 @@ class WeatherReportInputHandler(private val weatherUseCase: WeatherUseCase) :
                 }
                 is Response.Failure -> {
                     WeatherReportContract.Inputs.StopLoading
+                    println("weather contract"+weatherReport.message)
                     updateState { it.copy(errorMessage = weatherReport.message) }
                 }
             }

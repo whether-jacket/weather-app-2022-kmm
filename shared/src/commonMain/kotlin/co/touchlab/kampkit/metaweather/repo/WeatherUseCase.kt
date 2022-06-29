@@ -13,12 +13,12 @@ class WeatherUseCase(private val weatherRepo: WeatherRepo) {
         return try {
             val response = weatherRepo.getWeather()
             val weatherReport = WeatherReport(
-                cityTitle = response.cityTitle,
-                countryTitle = response.parentRegion.title,
-                temperature = "Temperature\n${response.consolidatedWeather[0].theTemp} C",
-                humidity = "Humidity\n${floor(response.consolidatedWeather[0].humidity).toInt()}",
-                windSpeed = "Wind Speed\n${floor(response.consolidatedWeather[0].windSpeed).toInt()}",
-                airPressure = "Air Pressure\n${floor(response.consolidatedWeather[0].airPressure).toInt()}"
+                cityTitle = response.cityName,
+                countryTitle = response.basicInformation.country,
+                temperature = "Temperature\n${response.temperatureInformation.temperature} C",
+                humidity = "Humidity\n${floor(response.temperatureInformation.humidity).toInt()}",
+                windSpeed = "Wind Speed\n${floor(response.wind.windSpeed).toInt()}",
+                airPressure = "Air Pressure\n${floor(response.temperatureInformation.pressure).toInt()}"
             )
             Response.Success(weatherReport)
         } catch (t: Throwable) {
