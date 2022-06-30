@@ -12,17 +12,15 @@ class WeatherReportInputHandler(private val weatherUseCase: WeatherUseCase) :
         input: WeatherReportContract.Inputs
     ) = when(input){
         is WeatherReportContract.Inputs.GetWeatherReport -> {
-            WeatherReportContract.Inputs.ShowLoading
+            updateState { it.copy(isLoading = true) }
             when(val weatherReport = weatherUseCase.getWeatherReport()){
                 is Response.Success -> {
-                    WeatherReportContract.Inputs.StopLoading
                     updateState {
-                        it.copy(weatherReport = weatherReport.data) }
+                        it.copy(weatherReport = weatherReport.data, isLoading = false) }
                 }
                 is Response.Failure -> {
-                    WeatherReportContract.Inputs.StopLoading
                     println("weather contract"+weatherReport.message)
-                    updateState { it.copy(errorMessage = weatherReport.message) }
+                    updateState { it.copy(isLoading = false, errorMessage = weatherReport.message) }
                 }
             }
         }

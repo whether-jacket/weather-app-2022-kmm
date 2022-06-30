@@ -17,7 +17,7 @@ fun LoadingScreen() {
     Column(
         Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(text = "Loading...")
         LoadingSpinner()

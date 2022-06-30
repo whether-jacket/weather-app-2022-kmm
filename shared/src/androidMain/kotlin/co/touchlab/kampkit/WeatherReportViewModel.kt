@@ -16,10 +16,12 @@ class WeatherReportViewModel(
     WeatherReportContract.ViewState>(
     config = configBuilder
         .forViewModel(
-            initialState = WeatherReportContract.ViewState(isLoading = false, errorMessage = ""),
+            initialState = WeatherReportContract.ViewState(),
             inputHandler = WeatherReportInputHandler(weatherUseCase),
             name = "Weather Report"
             )
 ) {
-
+    init {
+        trySend(WeatherReportContract.Inputs.GetWeatherReport)
+    }
 }
