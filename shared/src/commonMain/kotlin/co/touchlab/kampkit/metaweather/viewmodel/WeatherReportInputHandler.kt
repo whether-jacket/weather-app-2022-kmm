@@ -1,7 +1,6 @@
 package co.touchlab.kampkit.metaweather.viewmodel
 
 import co.touchlab.kampkit.metaweather.model.Response
-import co.touchlab.kampkit.metaweather.repo.WeatherReport
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import com.copperleaf.ballast.InputHandler
 import com.copperleaf.ballast.InputHandlerScope

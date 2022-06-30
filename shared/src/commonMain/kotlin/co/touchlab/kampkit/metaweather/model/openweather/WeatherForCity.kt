@@ -1,5 +1,4 @@
 package co.touchlab.kampkit.metaweather.model.openweather
-import co.touchlab.kampkit.metaweather.model.ConsolidatedWeather
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

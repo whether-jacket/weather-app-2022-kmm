@@ -1,6 +1,5 @@
 package co.touchlab.kampkit.metaweather.ktor
 
-import co.touchlab.kampkit.metaweather.model.WeatherForLocation
 import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
 import io.ktor.client.HttpClient
 import io.ktor.client.features.HttpTimeout
