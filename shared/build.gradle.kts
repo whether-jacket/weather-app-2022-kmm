@@ -93,6 +93,9 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
+                api(libs.ballast.core)
+                api(libs.ballast.repository)
+                implementation(libs.ballast.saved.state)
                 implementation(libs.sqlDelight.native)
                 implementation(libs.ktor.client.ios)
                 val coroutineCore = libs.coroutines.core.get()
@@ -122,6 +125,9 @@ kotlin {
         homepage = "https://github.com/touchlab/KaMPKit"
         framework {
             isStatic = false // SwiftUI preview requires dynamic framework
+            export(libs.ballast.core)
+            export(libs.ballast.repository)
+
         }
         ios.deploymentTarget = "12.4"
         podfile = project.file("../ios/Podfile")

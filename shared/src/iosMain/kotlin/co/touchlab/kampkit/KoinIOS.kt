@@ -26,6 +26,7 @@ fun initKoinIos(
 
 actual val platformModule = module {
     single<SqlDriver> { NativeSqliteDriver(KaMPKitDb.Schema, "KampkitDb") }
+    single { WeatherReportViewModel(get(), get()) }
 }
 
 // Access from Swift to create a logger
