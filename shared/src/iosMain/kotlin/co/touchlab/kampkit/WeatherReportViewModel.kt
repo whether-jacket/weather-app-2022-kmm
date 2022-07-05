@@ -20,8 +20,4 @@ class WeatherReportViewModel(
             inputHandler = WeatherReportInputHandler(weatherUseCase),
             name = "Weather Report"
         )
-) {
-    init {
-        trySend(WeatherReportContract.Inputs.GetWeatherReport)
-    }
-}
+)

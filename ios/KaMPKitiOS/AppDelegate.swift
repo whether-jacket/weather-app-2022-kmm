@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         startKoin()
         
-        let viewController = UIHostingController(rootView: WeatherScreen())
+        let viewController = UIHostingController(rootView: WeatherReportView())
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController

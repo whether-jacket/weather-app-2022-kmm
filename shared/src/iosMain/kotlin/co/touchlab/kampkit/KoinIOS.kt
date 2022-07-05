@@ -1,13 +1,11 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.db.KaMPKitDb
 import co.touchlab.kermit.Logger
 import com.russhwolf.settings.AppleSettings
 import com.russhwolf.settings.Settings
-import com.squareup.sqldelight.db.SqlDriver
-import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
+import org.koin.core.component.KoinComponent
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
 import platform.Foundation.NSUserDefaults
@@ -25,7 +23,6 @@ fun initKoinIos(
 )
 
 actual val platformModule = module {
-    single<SqlDriver> { NativeSqliteDriver(KaMPKitDb.Schema, "KampkitDb") }
     single { WeatherReportViewModel(get(), get()) }
 }
 
@@ -33,3 +30,8 @@ actual val platformModule = module {
 @Suppress("unused")
 fun Koin.loggerWithTag(tag: String) =
     get<Logger>(qualifier = null) { parametersOf(tag) }
+
+@Suppress("unused") // Called from Swift
+object KotlinDependencies : KoinComponent {
+    fun getWeatherReportViewModel() = getKoin().get<WeatherReportViewModel>()
+}

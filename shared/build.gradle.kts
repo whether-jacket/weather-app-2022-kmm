@@ -4,8 +4,6 @@ plugins {
     kotlin("kapt")
     id("kotlinx-serialization")
     id("com.android.library")
-    id("com.squareup.sqldelight")
-    id("org.orbit-mvi.orbit.swift") version "0.1.0" // https://github.com/orbit-mvi/orbit-swift-gradle-plugin
 }
 
 android {
@@ -134,8 +132,3 @@ kotlin {
     }
 }
 
-sqldelight {
-    database("KaMPKitDb") {
-        packageName = "co.touchlab.kampkit.db"
-    }
-}

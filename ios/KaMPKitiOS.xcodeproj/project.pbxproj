@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3DFF917C64A18A83DA010EE1 /* Pods_KaMPKitiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */; };
-		46A5B60826B04921002EFEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A5B60626B04920002EFEAA /* Main.storyboard */; };
 		46B5284D249C5CF400A7725D /* Koin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5284C249C5CF400A7725D /* Koin.swift */; };
 		76752E9F27972EDC0083A68D /* DimensionPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752E9E27972EDC0083A68D /* DimensionPresets.swift */; };
 		76752EA42797371F0083A68D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752EA32797371F0083A68D /* Colors.swift */; };
 		76752EA6279744E40083A68D /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76752EA5279744E40083A68D /* TextStyle.swift */; };
-		76819C29278FA35E0089AB6C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76819C28278FA35D0089AB6C /* ContentView.swift */; };
+		ECF30BC9F28B0BA45747C1E3 /* WeatherReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF30E43435DDB63A1B73E80 /* WeatherReportView.swift */; };
+		ECF30D89416D49C75E82DE3D /* CombineAdapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3082B6AE28D6D7247DA04 /* CombineAdapters.swift */; };
 		F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */; };
 		F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0923AA94BF0055F7C3 /* Assets.xcassets */; };
-		F1465F0D23AA94BF0055F7C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */; };
 		F1465F1823AA94C00055F7C3 /* KaMPKitiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F1723AA94C00055F7C3 /* KaMPKitiOSTests.swift */; };
 		F1465F2323AA94C00055F7C3 /* KaMPKitiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F2223AA94C00055F7C3 /* KaMPKitiOSUITests.swift */; };
 /* End PBXBuildFile section */
@@ -41,18 +40,17 @@
 /* Begin PBXFileReference section */
 		1DFCC00C8DAA719770A18D1A /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
 		2A1ED6A4A2A53F5F75C58E5F /* Pods-KaMPKitiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.release.xcconfig"; sourceTree = "<group>"; };
-		46A5B60726B04920002EFEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46B5284C249C5CF400A7725D /* Koin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koin.swift; sourceTree = "<group>"; };
 		76752E9E27972EDC0083A68D /* DimensionPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionPresets.swift; sourceTree = "<group>"; };
 		76752EA32797371F0083A68D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		76752EA5279744E40083A68D /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		76819C28278FA35D0089AB6C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF3082B6AE28D6D7247DA04 /* CombineAdapters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombineAdapters.swift; sourceTree = "<group>"; };
+		ECF30E43435DDB63A1B73E80 /* WeatherReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherReportView.swift; sourceTree = "<group>"; };
 		ED1F782AF3705197012D0C33 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1465EFD23AA94BF0055F7C3 /* KaMPKitiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaMPKitiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1465F0923AA94BF0055F7C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F1465F0C23AA94BF0055F7C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1465F0E23AA94BF0055F7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1465F1323AA94C00055F7C3 /* KaMPKitiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaMPKitiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1465F1723AA94C00055F7C3 /* KaMPKitiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaMPKitiOSTests.swift; sourceTree = "<group>"; };
@@ -145,12 +143,11 @@
 			children = (
 				76752E9D27972E990083A68D /* Resources */,
 				F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */,
-				46A5B60626B04920002EFEAA /* Main.storyboard */,
 				46B5284C249C5CF400A7725D /* Koin.swift */,
 				F1465F0923AA94BF0055F7C3 /* Assets.xcassets */,
-				F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */,
 				F1465F0E23AA94BF0055F7C3 /* Info.plist */,
-				76819C28278FA35D0089AB6C /* ContentView.swift */,
+				ECF30E43435DDB63A1B73E80 /* WeatherReportView.swift */,
+				ECF3082B6AE28D6D7247DA04 /* CombineAdapters.swift */,
 			);
 			path = KaMPKitiOS;
 			sourceTree = "<group>";
@@ -279,8 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46A5B60826B04921002EFEAA /* Main.storyboard in Resources */,
-				F1465F0D23AA94BF0055F7C3 /* LaunchScreen.storyboard in Resources */,
 				F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +348,8 @@
 				76752EA42797371F0083A68D /* Colors.swift in Sources */,
 				76752E9F27972EDC0083A68D /* DimensionPresets.swift in Sources */,
 				F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */,
-				76819C29278FA35E0089AB6C /* ContentView.swift in Sources */,
+				ECF30BC9F28B0BA45747C1E3 /* WeatherReportView.swift in Sources */,
+				ECF30D89416D49C75E82DE3D /* CombineAdapters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,25 +383,6 @@
 			targetProxy = F1465F1F23AA94C00055F7C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		46A5B60626B04920002EFEAA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46A5B60726B04920002EFEAA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1465F0C23AA94BF0055F7C3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F1465F2523AA94C00055F7C3 /* Debug */ = {
