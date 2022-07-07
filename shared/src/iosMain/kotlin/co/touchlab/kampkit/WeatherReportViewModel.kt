@@ -19,5 +19,5 @@ class WeatherReportViewModel(
             initialState = WeatherReportContract.ViewState(),
             inputHandler = WeatherReportInputHandler(weatherUseCase),
             name = "Weather Report"
-        )
+        ),
 )

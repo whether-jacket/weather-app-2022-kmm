@@ -11,7 +11,7 @@ struct WeatherReportView: View {
     WeatherReportContract.Events,
     WeatherReportContract.ViewState>(
         viewModelFactory: KotlinDependencies.shared.getWeatherReportViewModel,
-        eventHandlerFactory: nil
+            eventHandlerFactory: nil
     )
     var body: some View {
         WeatherReportContent(

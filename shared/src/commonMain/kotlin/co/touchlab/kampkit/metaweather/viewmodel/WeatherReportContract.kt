@@ -7,7 +7,15 @@ object WeatherReportContract {
         val weatherReport: WeatherReport = WeatherReport(),
         val isLoading: Boolean = false,
         val errorMessage: String = ""
-    )
+    ){
+        override fun toString(): String {
+            return "ViewState(" +
+                "Weather Report=${weatherReport::class.simpleName}, " +
+                "error=$errorMessage, " +
+                "isLoading=$isLoading" +
+                ")"
+        }
+    }
 
     sealed class Inputs {
         object GetWeatherReport : Inputs()

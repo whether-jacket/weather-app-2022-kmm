@@ -7,6 +7,7 @@ import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
+import com.copperleaf.ballast.BallastLogger
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.core.LoggingInterceptor
 import com.copperleaf.ballast.plusAssign
@@ -56,6 +57,7 @@ private val coreModule = module {
     factory<BallastViewModelConfiguration.Builder> {
         BallastViewModelConfiguration.Builder()
             .apply {
+                logger = {tag -> KermitBallastLogger(getWith(tag))}
                 this += LoggingInterceptor()
             }
     }
@@ -77,3 +79,9 @@ internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
 fun KoinComponent.injectLogger(tag: String): Lazy<Logger> = inject { parametersOf(tag) }
 
 expect val platformModule: Module
+
+class KermitBallastLogger(val log: Logger) : BallastLogger {
+    override fun debug(message: String) { log.d(message) }
+    override fun info(message: String) { log.i(message) }
+    override fun error(throwable: Throwable) { log.e(throwable) { "" } }
+}
