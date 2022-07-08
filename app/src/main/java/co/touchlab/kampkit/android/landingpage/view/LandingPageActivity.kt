@@ -11,17 +11,12 @@ import androidx.lifecycle.repeatOnLifecycle
 import co.touchlab.kampkit.WeatherReportViewModel
 import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
 import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
-import co.touchlab.kampkit.injectLogger
-import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
-import co.touchlab.kermit.Logger
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
 class LandingPageActivity : ComponentActivity(), KoinComponent {
 
-    private val log: Logger by injectLogger(LandingPageActivity::class.toString())
     private val viewModel: WeatherReportViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
