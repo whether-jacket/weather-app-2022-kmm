@@ -91,10 +91,6 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                api(libs.ballast.core)
-                api(libs.ballast.repository)
-                implementation(libs.ballast.saved.state)
-                implementation(libs.sqlDelight.native)
                 implementation(libs.ktor.client.ios)
                 val coroutineCore = libs.coroutines.core.get()
                 implementation("${coroutineCore.module.group}:${coroutineCore.module.name}:${coroutineCore.versionConstraint.displayName}") {

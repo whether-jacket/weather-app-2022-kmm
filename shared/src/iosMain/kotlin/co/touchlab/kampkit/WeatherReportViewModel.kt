@@ -13,11 +13,12 @@ class WeatherReportViewModel(
 ) : IosViewModel<
     WeatherReportContract.Inputs,
     WeatherReportContract.Events,
-    WeatherReportContract.ViewState>(
+    WeatherReportContract.ViewState
+    >(
     config = configBuilder
         .forViewModel(
             initialState = WeatherReportContract.ViewState(),
             inputHandler = WeatherReportInputHandler(weatherUseCase),
-            name = "Weather Report"
+            name = "WeatherReport"
         ),
 )

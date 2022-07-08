@@ -1,11 +1,14 @@
 package co.touchlab.kampkit
 
+import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kermit.Logger
+import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.russhwolf.settings.AppleSettings
 import com.russhwolf.settings.Settings
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
 import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 import org.koin.core.parameter.parametersOf
 import org.koin.dsl.module
 import platform.Foundation.NSUserDefaults
@@ -23,7 +26,7 @@ fun initKoinIos(
 )
 
 actual val platformModule = module {
-    single { WeatherReportViewModel(get(), get()) }
+    single { WeatherReportViewModel(get<WeatherUseCase>(), get<BallastViewModelConfiguration.Builder>()) }
 }
 
 // Access from Swift to create a logger
@@ -33,5 +36,5 @@ fun Koin.loggerWithTag(tag: String) =
 
 @Suppress("unused") // Called from Swift
 object KotlinDependencies : KoinComponent {
-    fun getWeatherReportViewModel() = getKoin().get<WeatherReportViewModel>()
+    fun getWeatherReportViewModel() = get<WeatherReportViewModel>()
 }

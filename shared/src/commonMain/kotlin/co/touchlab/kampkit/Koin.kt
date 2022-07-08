@@ -4,6 +4,7 @@ import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
+import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
@@ -13,8 +14,6 @@ import com.copperleaf.ballast.core.LoggingInterceptor
 import com.copperleaf.ballast.plusAssign
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 import org.koin.core.parameter.parametersOf
@@ -52,15 +51,6 @@ private val coreModule = module {
     single<Clock> {
         Clock.System
     }
-    factory<WeatherRepo> { WeatherRepo() }
-    factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
-    factory<BallastViewModelConfiguration.Builder> {
-        BallastViewModelConfiguration.Builder()
-            .apply {
-                logger = {tag -> KermitBallastLogger(getWith(tag))}
-                this += LoggingInterceptor()
-            }
-    }
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,
@@ -69,14 +59,23 @@ private val coreModule = module {
     val baseLogger =
         Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
+
+    factory<WeatherRepo> { WeatherRepo() }
+    factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
+    factory<BallastViewModelConfiguration.Builder> {
+        BallastViewModelConfiguration.Builder()
+            .apply {
+                logger = {tag -> KermitBallastLogger(getWith(tag))}
+                this += LoggingInterceptor()
+                initialState = WeatherReportContract.ViewState()
+            }
+    }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
     return get(parameters = { parametersOf(*params) })
 }
 
-// Simple function to clean up the syntax a bit
-fun KoinComponent.injectLogger(tag: String): Lazy<Logger> = inject { parametersOf(tag) }
 
 expect val platformModule: Module
 

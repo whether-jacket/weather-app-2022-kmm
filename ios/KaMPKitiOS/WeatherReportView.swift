@@ -10,9 +10,9 @@ struct WeatherReportView: View {
     WeatherReportContract.Inputs,
     WeatherReportContract.Events,
     WeatherReportContract.ViewState>(
-        viewModelFactory: KotlinDependencies.shared.getWeatherReportViewModel,
-            eventHandlerFactory: nil
+        viewModelFactory: {KotlinDependencies.shared.getWeatherReportViewModel()}
     )
+    
     var body: some View {
         WeatherReportContent(
             vmState: observableModel.vmState,
@@ -44,6 +44,7 @@ struct WeatherReportContent: View {
                         .padding(SurroundingSpacings.large)
             }
                     .multilineTextAlignment(.center)
+            if vmState.isLoading {Text("Loading...")}
         }
                 .font(TextStyle.body.getFont())
     }
