@@ -3,6 +3,7 @@ package co.touchlab.kampkit
 import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApi
 import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApiImpl
 import co.touchlab.kampkit.metaweather.repo.WeatherRepo
+import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
 import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
 import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
 import co.touchlab.kermit.Logger
@@ -12,6 +13,11 @@ import com.copperleaf.ballast.BallastLogger
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.core.LoggingInterceptor
 import com.copperleaf.ballast.plusAssign
+import com.copperleaf.ballast.repository.bus.EventBus
+import com.copperleaf.ballast.repository.bus.EventBusImpl
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
@@ -61,7 +67,6 @@ private val coreModule = module {
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
 
     factory<WeatherRepo> { WeatherRepo() }
-    factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
     factory<BallastViewModelConfiguration.Builder> {
         BallastViewModelConfiguration.Builder()
             .apply {
@@ -70,6 +75,12 @@ private val coreModule = module {
                 initialState = WeatherReportContract.ViewState()
             }
     }
+    factory<CoroutineScope> {
+        CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    }
+    single<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
+    single<EventBus> { EventBusImpl() }
+    single <WeatherReportRepository>{ WeatherReportRepository(get(), get(), get(), get())  }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {

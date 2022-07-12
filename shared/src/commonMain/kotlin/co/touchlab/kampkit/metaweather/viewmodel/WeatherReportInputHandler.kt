@@ -1,26 +1,33 @@
 package co.touchlab.kampkit.metaweather.viewmodel
 
-import co.touchlab.kampkit.metaweather.model.Response
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
+import co.touchlab.kampkit.metaweather.repo.WeatherReport
+import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
 import com.copperleaf.ballast.InputHandler
 import com.copperleaf.ballast.InputHandlerScope
+import com.copperleaf.ballast.observeFlows
+import com.copperleaf.ballast.repository.cache.getValueOrElse
+import kotlinx.coroutines.flow.map
 
-class WeatherReportInputHandler(private val weatherUseCase: WeatherUseCase) :
-    InputHandler<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState> {
+class WeatherReportInputHandler(private val weatherReportRepository: WeatherReportRepository) :
+    InputHandler<
+        WeatherReportContract.Inputs,
+        WeatherReportContract.Events,
+        WeatherReportContract.ViewState
+        > {
     override suspend fun InputHandlerScope<WeatherReportContract.Inputs, WeatherReportContract.Events, WeatherReportContract.ViewState>.handleInput(
         input: WeatherReportContract.Inputs
-    ) = when(input){
+    ) = when (input) {
         is WeatherReportContract.Inputs.GetWeatherReport -> {
-            updateState { it.copy(isLoading = true) }
-            when(val weatherReport = weatherUseCase.getWeatherReport()){
-                is Response.Success -> {
-                    updateState {
-                        it.copy(weatherReport = weatherReport.data, isLoading = false) }
-                }
-                is Response.Failure -> {
-                    println("weather contract"+weatherReport.message)
-                    updateState { it.copy(isLoading = false, errorMessage = weatherReport.message) }
-                }
+            observeFlows(
+                "Observe Weather Report",
+                weatherReportRepository
+                    .getWeatherReport(true)
+                    .map { WeatherReportContract.Inputs.WeatherReportUpdated(it) }
+            )
+        }
+        is WeatherReportContract.Inputs.WeatherReportUpdated -> {
+            updateState {
+                it.copy(weatherReport = input.weatherReport)
             }
         }
         is WeatherReportContract.Inputs.ShowLoading -> {
@@ -30,6 +37,4 @@ class WeatherReportInputHandler(private val weatherUseCase: WeatherUseCase) :
             updateState { it.copy(isLoading = false) }
         }
     }
-
-
 }
