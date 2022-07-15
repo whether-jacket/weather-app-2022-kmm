@@ -12,13 +12,12 @@ struct WeatherReportView: View {
     WeatherReportContract.ViewState>(
         viewModelFactory: {KotlinDependencies.shared.getWeatherReportViewModel()}
     )
-    
     var body: some View {
         WeatherReportContent(
             vmState: observableModel.vmState,
             postInput: observableModel.postInput
-        ).withViewModel(observableModel){
-            observableModel.postInput(WeatherReportContract.InputsGetWeatherReport())
+        ).withViewModel(observableModel) {
+            
         }
     }
 }
@@ -27,26 +26,25 @@ struct WeatherReportContent: View {
     var vmState: WeatherReportContract.ViewState
     var postInput: (WeatherReportContract.Inputs) -> Void
     var body: some View {
+        if vmState.weatherReport.isLoading() {Text("Loading...")} else{
         HStack(alignment: .center) {
             VStack {
-                Text(vmState.weatherReport.cityTitle ).bold().font(TextStyle.headline.getFont())
-                Text(vmState.weatherReport.countryTitle ).bold()
+                Text(vmState.weatherForecast.cityTitle ).bold().font(Font.title)
+                Text(vmState.weatherForecast.countryTitle ).bold()
                 Divider()
                 HStack(spacing: HorizontalSpacings.x10) {
-                    Text(vmState.weatherReport.temperature )
-                    Text(vmState.weatherReport.humidity )
+                    Text(vmState.weatherForecast.temperature )
+                    Text(vmState.weatherForecast.humidity )
                 }
                         .padding(SurroundingSpacings.large)
                 HStack(spacing: HorizontalSpacings.x10) {
-                    Text(vmState.weatherReport.windSpeed )
-                    Text(vmState.weatherReport.airPressure )
+                    Text(vmState.weatherForecast.windSpeed )
+                    Text(vmState.weatherForecast.airPressure )
                 }
                         .padding(SurroundingSpacings.large)
             }
                     .multilineTextAlignment(.center)
-            if vmState.isLoading {Text("Loading...")}
         }
-                .font(TextStyle.body.getFont())
+        }
     }
 }
-

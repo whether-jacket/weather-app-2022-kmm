@@ -6,5 +6,5 @@ install! 'cocoapods', :deterministic_uuids => false
 
 target 'KaMPKitiOS' do
     pod 'shared', :path => '../shared/'
-    pod 'SwifterSwift/SwiftStdlib', '~> 5.2.0' # Standard Library Extensions
+    pod 'SwiftLint'
 end
