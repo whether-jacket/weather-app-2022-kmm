@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class WeatherForCity(
     @SerialName("coord")
-    val coordinates: Coord,
+    val coordinates: Coordinate,
 
     @SerialName("weather")
     val weather: Array< Weather>,
@@ -26,10 +26,10 @@ data class WeatherForCity(
     val clouds: Clouds,
 
     @SerialName("dt")
-    val dt: Long,
+    val dataReceivingTime: Long,
 
     @SerialName("sys")
-    val basicInformation: Sys,
+    val basicInformation: WeatherAttributes,
 
     @SerialName("timezone")
     val timezone: Int,
