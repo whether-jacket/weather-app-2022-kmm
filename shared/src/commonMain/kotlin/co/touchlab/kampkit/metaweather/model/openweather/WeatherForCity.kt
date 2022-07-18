@@ -41,7 +41,7 @@ data class WeatherForCity(
     val cityName: String,
 
     @SerialName("cod")
-    val cod: Int,
+    val internalParameter: Int,
 
 
 
