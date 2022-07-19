@@ -30,8 +30,9 @@ data class WeatherForCity(
     @SerialName("dt")
     val dataReceivingTime: Long,
 
-    @Contextual
+
     @SerialName("sys")
+    @Contextual
     val basicInformation: WeatherAttributes,
 
     @SerialName("timezone")
