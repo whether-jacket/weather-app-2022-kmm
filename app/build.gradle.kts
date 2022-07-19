@@ -27,8 +27,8 @@ android {
     }
 
     lint {
-        isWarningsAsErrors = false
-        isAbortOnError = false
+        isWarningsAsErrors = true
+        isAbortOnError = true
     }
 
     buildFeatures {
@@ -41,17 +41,15 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 }
 
 dependencies {
     implementation(project(":shared"))
     implementation(libs.bundles.app.ui)
+    implementation(libs.multiplatformSettings.common)
+    implementation(libs.kotlinx.dateTime)
     coreLibraryDesugaring(libs.android.desugaring)
-    implementation(libs.koin.android)
     testImplementation(libs.junit)
-    implementation(libs.compose.navigation)
-    implementation(libs.orbit.mvi.viewmodel)
-    implementation(libs.orbit.mvi.core)
 }

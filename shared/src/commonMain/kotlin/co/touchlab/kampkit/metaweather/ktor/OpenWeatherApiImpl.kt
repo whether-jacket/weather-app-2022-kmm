@@ -2,26 +2,25 @@ package co.touchlab.kampkit.metaweather.ktor
 
 import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
 import io.ktor.client.HttpClient
-import io.ktor.client.features.HttpTimeout
-import io.ktor.client.features.json.JsonFeature
-import io.ktor.client.features.json.serializer.KotlinxSerializer
-import io.ktor.client.features.logging.DEFAULT
-import io.ktor.client.features.logging.LogLevel
-import io.ktor.client.features.logging.Logger
-import io.ktor.client.features.logging.Logging
+import io.ktor.client.call.body
+import io.ktor.client.plugins.ContentNegotiation
+import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.logging.DEFAULT
+import io.ktor.client.plugins.logging.LogLevel
+import io.ktor.client.plugins.logging.Logger
+import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.request.get
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
 class OpenWeatherApiImpl : OpenWeatherApi {
 
     private val client = HttpClient {
-        install(JsonFeature) {
-            serializer = KotlinxSerializer(
-                Json {
-                    isLenient = true
-                    ignoreUnknownKeys = true
-                }
-            )
+        install(ContentNegotiation) {
+            json(Json {
+                isLenient = true
+                ignoreUnknownKeys = true
+            })
         }
         install(Logging) {
             logger = Logger.DEFAULT
@@ -36,6 +35,6 @@ class OpenWeatherApiImpl : OpenWeatherApi {
     }
 
     override suspend fun getWeatherFromApi(): WeatherForCity {
-        return client.get(OpenWeatherApi.COMPLETE_URL)
+        return client.get(OpenWeatherApi.COMPLETE_URL).body()
     }
 }

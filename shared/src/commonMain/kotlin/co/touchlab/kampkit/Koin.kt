@@ -27,7 +27,6 @@ import org.koin.core.scope.Scope
 import org.koin.dsl.module
 
 fun initKoin(appModule: Module): KoinApplication {
-
     val koinApplication = startKoin {
         modules(
             appModule,
@@ -51,9 +50,6 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
-    single<OpenWeatherApi> {
-        OpenWeatherApiImpl()
-    }
     single<Clock> {
         Clock.System
     }
@@ -62,15 +58,17 @@ private val coreModule = module {
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,
     // that would likely go into platformModule expect/actual.
     // See https://github.com/touchlab/Kermit
-    val baseLogger =
-        Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
+    val baseLogger = Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
 
+    single<OpenWeatherApi> {
+        OpenWeatherApiImpl()
+    }
     factory<WeatherRepo> { WeatherRepo() }
     factory<BallastViewModelConfiguration.Builder> {
         BallastViewModelConfiguration.Builder()
             .apply {
-                logger = {tag -> KermitBallastLogger(getWith(tag))}
+                logger = { tag -> KermitBallastLogger(getWith(tag)) }
                 this += LoggingInterceptor()
                 initialState = WeatherReportContract.ViewState()
             }
@@ -78,15 +76,16 @@ private val coreModule = module {
     factory<CoroutineScope> {
         CoroutineScope(SupervisorJob() + Dispatchers.Default)
     }
+    single<EventBus> {
+        EventBusImpl()
+    }
     single<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
-    single<EventBus> { EventBusImpl() }
     single <WeatherReportRepository>{ WeatherReportRepository(get(), get(), get(), get())  }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
     return get(parameters = { parametersOf(*params) })
 }
-
 
 expect val platformModule: Module
 

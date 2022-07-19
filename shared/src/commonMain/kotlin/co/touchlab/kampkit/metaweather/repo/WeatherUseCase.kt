@@ -1,10 +1,11 @@
 package co.touchlab.kampkit.metaweather.repo
 
 import co.touchlab.kampkit.metaweather.model.Response
-import io.ktor.client.features.ClientRequestException
-import io.ktor.client.features.RedirectResponseException
-import io.ktor.client.features.ResponseException
-import io.ktor.client.features.ServerResponseException
+import io.ktor.client.plugins.ClientRequestException
+import io.ktor.client.plugins.RedirectResponseException
+import io.ktor.client.plugins.ResponseException
+import io.ktor.client.plugins.ServerResponseException
+
 import io.ktor.http.HttpStatusCode
 import kotlin.math.floor
 

@@ -5,10 +5,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
 import co.touchlab.kampkit.AppInfo
-import co.touchlab.kampkit.android.BuildConfig.APPLICATION_ID
 import co.touchlab.kampkit.initKoin
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
-import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 class MainApp : Application() {
@@ -31,5 +28,5 @@ class MainApp : Application() {
 }
 
 object AndroidAppInfo : AppInfo {
-    override val appId: String = APPLICATION_ID
+    override val appId: String = BuildConfig.APPLICATION_ID
 }

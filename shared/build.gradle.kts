@@ -1,9 +1,9 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    kotlin("kapt")
     id("kotlinx-serialization")
     id("com.android.library")
+    id("com.squareup.sqldelight")
 }
 
 android {
@@ -13,15 +13,19 @@ android {
         targetSdk = libs.versions.targetSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 
     lint {
-        isWarningsAsErrors = false
-        isAbortOnError = false
+        isWarningsAsErrors = true
+        isAbortOnError = true
     }
 }
 
-version = "1.0"
-// dependencies {}
+version = "1.2"
 
 android {
     configurations {
@@ -40,8 +44,6 @@ kotlin {
     // Note: iosSimulatorArm64 target requires that all dependencies have M1 support
     iosSimulatorArm64()
 
-    version = "1.1"
-
     sourceSets {
         all {
             languageSettings.apply {
@@ -54,11 +56,6 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(libs.touchlab.kermit)
-                api(libs.orbit.mvi.core)
-                api(libs.icerock.moko.mvvm.core)
-                api(libs.ballast.core)
-                api(libs.ballast.repository)
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
                 implementation(libs.sqlDelight.coroutinesExt)
@@ -66,8 +63,10 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
-                implementation(libs.ballast.saved.state)
-                implementation(libs.ballast.debugger)
+                api(libs.touchlab.kermit)
+                api(libs.ballast.core)
+                api(libs.ballast.repository)
+                implementation(libs.ballast.savedstate)
             }
         }
         val commonTest by getting {
@@ -77,11 +76,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(libs.androidx.lifecycle.viewmodel)
                 implementation(libs.sqlDelight.android)
                 implementation(libs.ktor.client.okHttp)
-                implementation(libs.androidx.lifecycle.viewmodel)
-                implementation(libs.orbit.mvi.viewmodel)
-                implementation(libs.koin.android)
+                api(libs.koin.android)
+                implementation(libs.ballast.debugger)
             }
         }
         val androidTest by getting {
@@ -91,11 +90,12 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
+                implementation(libs.sqlDelight.native)
                 implementation(libs.ktor.client.ios)
                 val coroutineCore = libs.coroutines.core.get()
                 implementation("${coroutineCore.module.group}:${coroutineCore.module.name}:${coroutineCore.versionConstraint.displayName}") {
                     version {
-                        strictly(libs.versions.coroutines.native.get())
+                        strictly(libs.versions.coroutines.get())
                     }
                 }
             }
@@ -121,10 +121,14 @@ kotlin {
             isStatic = false // SwiftUI preview requires dynamic framework
             export(libs.ballast.core)
             export(libs.ballast.repository)
-
         }
         ios.deploymentTarget = "12.4"
         podfile = project.file("../ios/Podfile")
     }
 }
 
+sqldelight {
+    database("KaMPKitDb") {
+        packageName = "co.touchlab.kampkit.db"
+    }
+}

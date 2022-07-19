@@ -3,6 +3,7 @@ package co.touchlab.kampkit.metaweather.viewmodel
 import co.touchlab.kampkit.metaweather.repo.WeatherReport
 import com.copperleaf.ballast.repository.cache.Cached
 import com.copperleaf.ballast.repository.cache.getCachedOrNull
+import com.copperleaf.ballast.repository.cache.getValueOrElse
 
 object WeatherReportContract {
     data class ViewState(
@@ -10,6 +11,7 @@ object WeatherReportContract {
         val isLoading: Boolean = false,
         val errorMessage: String = ""
     ){
+        val weatherForecast: WeatherReport = weatherReport.getValueOrElse { WeatherReport() }
         override fun toString(): String {
             return "ViewState(" +
                 "Weather Report=${weatherReport::class.simpleName}, " +

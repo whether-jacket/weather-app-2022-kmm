@@ -1,9 +1,10 @@
 package co.touchlab.kampkit.metaweather.model.openweather
+
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Sys(
+data class WeatherAttributes(
     @SerialName("type")
     val type: Int,
 
@@ -18,5 +19,4 @@ data class Sys(
 
     @SerialName("sunset")
     val sunset: Long,
-
 )
