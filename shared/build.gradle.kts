@@ -18,9 +18,7 @@ android {
             isIncludeAndroidResources = true
         }
     }
-
     lint {
-        isWarningsAsErrors = false
         isAbortOnError = false
     }
 }
