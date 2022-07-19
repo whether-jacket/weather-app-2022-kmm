@@ -19,6 +19,7 @@ android {
         }
     }
     lint {
+        isWarningsAsErrors = false
         isAbortOnError = false
     }
 }

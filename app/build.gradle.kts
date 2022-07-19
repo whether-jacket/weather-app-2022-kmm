@@ -27,8 +27,8 @@ android {
     }
 
     lint {
-        isWarningsAsErrors = true
-        isAbortOnError = true
+        isWarningsAsErrors = false
+        isAbortOnError = false
     }
 
     buildFeatures {
@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.bundles.app.ui)
     implementation(libs.multiplatformSettings.common)
     implementation(libs.kotlinx.dateTime)
+    implementation(libs.compose.navigation)
     coreLibraryDesugaring(libs.android.desugaring)
     testImplementation(libs.junit)
 }
