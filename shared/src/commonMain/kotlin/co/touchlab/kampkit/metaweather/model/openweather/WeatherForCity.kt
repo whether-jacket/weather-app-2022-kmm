@@ -1,9 +1,11 @@
 package co.touchlab.kampkit.metaweather.model.openweather
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class WeatherForCity(
+    @Contextual
     @SerialName("coord")
     val coordinates: Coordinate,
 
@@ -28,6 +30,7 @@ data class WeatherForCity(
     @SerialName("dt")
     val dataReceivingTime: Long,
 
+    @Contextual
     @SerialName("sys")
     val basicInformation: WeatherAttributes,
 
