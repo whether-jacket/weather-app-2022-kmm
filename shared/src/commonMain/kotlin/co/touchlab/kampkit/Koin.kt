@@ -1,11 +1,11 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApi
-import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApiImpl
-import co.touchlab.kampkit.metaweather.repo.WeatherRepo
-import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
-import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
+import co.touchlab.kampkit.openweather.ktor.OpenWeatherApi
+import co.touchlab.kampkit.openweather.ktor.OpenWeatherApiImpl
+import co.touchlab.kampkit.openweather.repo.WeatherRepo
+import co.touchlab.kampkit.openweather.repo.WeatherReportRepository
+import co.touchlab.kampkit.openweather.repo.WeatherUseCase
+import co.touchlab.kampkit.openweather.viewmodel.WeatherReportContract
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter

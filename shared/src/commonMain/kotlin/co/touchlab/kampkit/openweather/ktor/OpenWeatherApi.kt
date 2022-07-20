@@ -1,6 +1,6 @@
-package co.touchlab.kampkit.metaweather.ktor
+package co.touchlab.kampkit.openweather.ktor
 
-import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
+import co.touchlab.kampkit.openweather.model.openweather.WeatherForCity
 
 interface OpenWeatherApi {
     suspend fun getWeatherFromApi(): WeatherForCity

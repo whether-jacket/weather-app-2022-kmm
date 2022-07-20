@@ -1,8 +1,8 @@
 package co.touchlab.kampkit.vm
 
-import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
-import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportContract
-import co.touchlab.kampkit.metaweather.viewmodel.WeatherReportInputHandler
+import co.touchlab.kampkit.openweather.repo.WeatherReportRepository
+import co.touchlab.kampkit.openweather.viewmodel.WeatherReportContract
+import co.touchlab.kampkit.openweather.viewmodel.WeatherReportInputHandler
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.core.IosViewModel
 import com.copperleaf.ballast.forViewModel

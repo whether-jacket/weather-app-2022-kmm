@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.metaweather.model
+package co.touchlab.kampkit.openweather.model
 
 sealed class Response<T> {
     class Success<T>(val data: T) : Response<T>()

@@ -1,6 +1,6 @@
-package co.touchlab.kampkit.metaweather.viewmodel
+package co.touchlab.kampkit.openweather.viewmodel
 
-import co.touchlab.kampkit.metaweather.repo.WeatherReport
+import co.touchlab.kampkit.openweather.repo.WeatherReport
 import com.copperleaf.ballast.repository.cache.Cached
 import com.copperleaf.ballast.repository.cache.getCachedOrNull
 import com.copperleaf.ballast.repository.cache.getValueOrElse

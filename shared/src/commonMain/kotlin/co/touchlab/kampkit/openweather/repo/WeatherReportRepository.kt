@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.metaweather.repo
+package co.touchlab.kampkit.openweather.repo
 
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.repository.BallastRepository

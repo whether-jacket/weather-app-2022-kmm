@@ -1,11 +1,9 @@
-package co.touchlab.kampkit.metaweather.viewmodel
+package co.touchlab.kampkit.openweather.viewmodel
 
-import co.touchlab.kampkit.metaweather.repo.WeatherReport
-import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
+import co.touchlab.kampkit.openweather.repo.WeatherReportRepository
 import com.copperleaf.ballast.InputHandler
 import com.copperleaf.ballast.InputHandlerScope
 import com.copperleaf.ballast.observeFlows
-import com.copperleaf.ballast.repository.cache.getValueOrElse
 import kotlinx.coroutines.flow.map
 
 class WeatherReportInputHandler(private val weatherReportRepository: WeatherReportRepository) :

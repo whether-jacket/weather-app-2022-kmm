@@ -1,7 +1,7 @@
-package co.touchlab.kampkit.metaweather.repo
+package co.touchlab.kampkit.openweather.repo
 
-import co.touchlab.kampkit.metaweather.ktor.OpenWeatherApi
-import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
+import co.touchlab.kampkit.openweather.ktor.OpenWeatherApi
+import co.touchlab.kampkit.openweather.model.openweather.WeatherForCity
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 

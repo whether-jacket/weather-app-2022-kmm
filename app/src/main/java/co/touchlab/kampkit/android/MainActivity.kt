@@ -10,7 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import co.touchlab.kampkit.android.landingpage.view.screens.LoadingScreen
 import co.touchlab.kampkit.android.landingpage.view.screens.WeatherReportView
-import co.touchlab.kampkit.metaweather.repo.WeatherReport
+import co.touchlab.kampkit.openweather.repo.WeatherReport
 import co.touchlab.kampkit.vm.WeatherReportViewModel
 import com.copperleaf.ballast.repository.cache.getValueOrElse
 import com.copperleaf.ballast.repository.cache.isLoading

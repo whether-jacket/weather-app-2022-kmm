@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  KaMPKitiOS
-//
-//  Created by Kevin Schildhorn on 12/18/19.
-//  Copyright © 2019 Touchlab. All rights reserved.
-//
-
 import SwiftUI
 import shared
 

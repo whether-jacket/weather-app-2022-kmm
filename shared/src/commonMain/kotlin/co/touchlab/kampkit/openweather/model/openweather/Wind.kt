@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.metaweather.model.openweather
+package co.touchlab.kampkit.openweather.model.openweather
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -10,5 +10,4 @@ data class Wind(
 
     @SerialName("deg")
     val deg: Double,
-
-    )
+)

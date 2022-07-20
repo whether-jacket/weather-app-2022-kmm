@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.metaweather.repo
+package co.touchlab.kampkit.openweather.repo
 
 data class WeatherReport(
     val cityTitle: String = "",

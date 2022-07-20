@@ -1,6 +1,6 @@
-package co.touchlab.kampkit.metaweather.ktor
+package co.touchlab.kampkit.openweather.ktor
 
-import co.touchlab.kampkit.metaweather.model.openweather.WeatherForCity
+import co.touchlab.kampkit.openweather.model.openweather.WeatherForCity
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.plugins.ContentNegotiation

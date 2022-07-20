@@ -1,6 +1,6 @@
-package co.touchlab.kampkit.metaweather.repo
+package co.touchlab.kampkit.openweather.repo
 
-import co.touchlab.kampkit.metaweather.model.Response
+import co.touchlab.kampkit.openweather.model.Response
 import io.ktor.client.plugins.ClientRequestException
 import io.ktor.client.plugins.RedirectResponseException
 import io.ktor.client.plugins.ResponseException

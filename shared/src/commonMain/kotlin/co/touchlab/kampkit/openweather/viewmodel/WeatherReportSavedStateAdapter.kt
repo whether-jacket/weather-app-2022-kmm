@@ -1,4 +1,4 @@
-package co.touchlab.kampkit.metaweather.viewmodel
+package co.touchlab.kampkit.openweather.viewmodel
 
 import com.copperleaf.ballast.savedstate.RestoreStateScope
 import com.copperleaf.ballast.savedstate.SaveStateScope

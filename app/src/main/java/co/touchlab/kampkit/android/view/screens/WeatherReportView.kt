@@ -13,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import co.touchlab.kampkit.android.design.Spacing
 import co.touchlab.kampkit.android.design.styles.TextStyles
-import co.touchlab.kampkit.metaweather.repo.WeatherReport
+import co.touchlab.kampkit.openweather.repo.WeatherReport
 
 @Composable
 fun WeatherReportView(weatherReport: WeatherReport, errorMessage: String) {

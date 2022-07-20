@@ -1,7 +1,7 @@
 package co.touchlab.kampkit
 
 import co.touchlab.kampkit.db.KaMPKitDb
-import co.touchlab.kampkit.metaweather.repo.WeatherReportRepository
+import co.touchlab.kampkit.openweather.repo.WeatherReportRepository
 import co.touchlab.kampkit.vm.WeatherReportViewModel
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.russhwolf.settings.AndroidSettings
