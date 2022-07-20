@@ -1,4 +1,5 @@
 <div id="top"></div>
+
 <p align="center">
 <img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
 <img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/ios.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
@@ -242,8 +243,10 @@ Open `local.properties`<br>
 sdk.dir=[ANDROID_SDK_ROOT location as used during installation]
 ```
 </details>
+
 <details>
 <summary>4. Gradle Sync Fail: 'pod install' fail</summary>
+
 If you see the following error:
 ```bash
 Please, check that file "../iosApp/Podfile" contains following lines in header: source 'https://cdn.cocoapods.org'
@@ -264,13 +267,18 @@ export LANG=en_US.UTF-8
 `source ~/.zshrc` or quit & reopen terminal <br>
 Source: https://stackoverflow.com/questions/69805554/kmm-project-setup-with-cocoapods-fails-on-first-compile
 </details>
+
+
 </details>
 <!-- end Android -->
+
 <!-- Build iOS -->
 <details>
 <summary>Build iOS</summary>
+
 <details>
 <summary>1. Gradle Build</summary>
+
 Go to project folder:
 ```bash
 cd weather-app-2022-kmm
@@ -282,8 +290,10 @@ Run gralde build:
 Open Xcode **workspace** project in the `ios/` folder: `KaMPKitiOS.xcworkspace`. <br>
 Run the iOS app on Simulator. <br>
 </details>
+
 <details>
 <summary>2. Error: No such module</summary>
+
 If you get the following compilation error:
 ```bash
 no such module: 'shared'
@@ -293,8 +303,10 @@ Delete `Pods/` folder located in the root directory of the iOS project.<br>
 Run the command `pod install` in that same iOS root directory (which is `/weather-app-2022-kmm/ios/` to be specific).<br>
 This will generate a new `Pods` folder. Reopen the `.xcworkspace` file and try to build again.
 </details>
+
 <details>
 <summary>3. Error: Framework not found</summary>
+
 If you see the following error:<br>
 ```bash
 Framework not found shared_umbrella
