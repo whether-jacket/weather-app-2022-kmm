@@ -1,338 +1,305 @@
-<p align="left">
-  <img src="https://cdn.rawgit.com/SwifterSwift/SwifterSwift/master/Assets/logo.svg" title="swifterSwift">
-</p>
+<div id="top"></div>
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/ios.png?raw=true" alt="" data-canonical-src="" width="340" height="675" />
+</p></br>
 
-[![Build Status](https://github.com/SwifterSwift/SwifterSwift/workflows/SwifterSwift/badge.svg?branch=master)](https://github.com/SwifterSwift/SwifterSwift/actions)
-[![Platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)](https://github.com/SwifterSwift/swifterSwift)
-[![Cocoapods](https://img.shields.io/cocoapods/v/SwifterSwift.svg)](https://cocoapods.org/pods/SwifterSwift)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![SPM compatible](https://img.shields.io/badge/SPM-Compatible-brightgreen.svg?style=flat)](https://swift.org/package-manager/)
-[![Accio supported](https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat)](https://github.com/JamitLabs/Accio)
-[![codecov](https://codecov.io/gh/SwifterSwift/SwifterSwift/branch/master/graph/badge.svg)](https://codecov.io/gh/SwifterSwift/SwifterSwift)
-[![docs](http://swifterswift.com/docs/badge.svg)](http://swifterswift.com/docs)
-[![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)](https://swift.org)
-[![Xcode](https://img.shields.io/badge/Xcode-11.4-blue.svg)](https://developer.apple.com/xcode)
-[![MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
-[![Slack Channel](https://slackin-ppvrggbpgn.now.sh/badge.svg)](https://slackin-ppvrggbpgn.now.sh/)
+<h2 align="center">Weather App 2022 KMM</h2>
+<br>
 
-SwifterSwift is a collection of **over 500 native Swift extensions**, with handy methods, syntactic sugar, and performance improvements for wide range of primitive data types, UIKit and Cocoa classes –over 500 in 1– for iOS, macOS, tvOS, watchOS and Linux.
+## Built With
+* [Kotlin Multiplatform Mobile](https://youtu.be/0xKTM0A8gdI)
 
-### [Whats New in v5.2?](https://github.com/SwifterSwift/SwifterSwift/blob/master/CHANGELOG.md#v520)
-
-## Requirements
-
-- **iOS** 10.0+ / **tvOS** 9.0+ / **watchOS** 2.0+ / **macOS** 10.10+ / **Ubuntu** 14.04+
-- Swift 5.0+
-
-## Looking to use SwifterSwift for older versions of Swift
-
-SwifterSwift is Swift v5.0+ compatible starting from v5
-
-- To use with **Swift 3 / Xcode 8.x** please ensure you are using [**`v3.1.1`**](https://github.com/SwifterSwift/SwifterSwift/releases/tag/3.1.1).
-- To use with **Swift 3.2 / Xcode 9.x** please ensure you are using [**`v3.2.0`**](https://github.com/SwifterSwift/SwifterSwift/releases/tag/3.2.0).
+## Prerequisites
+* [Java JDK Oracle (SE) 11](https://www.oracle.com/java/technologies/downloads/#java11)
+* [Ruby v2.6](https://www.ruby-lang.org/en/downloads/)
+* [Cocoapods v1.8.4](https://guides.cocoapods.org/using/getting-started.html#installation)
+* [JetBrains Toolbox (Optional)](https://www.jetbrains.com/toolbox-app/)
+* [Android Studio (Chipmunk or latest)](https://developer.android.com/studio/archive)
+* [Android Studio KMM Plugin (Optional)](https://kotlinlang.org/docs/kmm-plugin-releases.html)
+* [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+* [Xcode Kotlin Plugin (Optional)](https://github.com/touchlab/xcode-kotlin)
 
 ## Installation
+<!-- Ensure Java Properly Installed -->
+<details>
+<summary>Java</summary>
 
 <details>
-<summary>CocoaPods</summary>
-</br>
-<p>To integrate SwifterSwift into your Xcode project using <a href="http://cocoapods.org">CocoaPods</a>, specify it in your <code>Podfile</code>:</p>
+<!-- Ensure Java Home variable is set -->
+<summary>1. Java Home variable is set</summary>
 
-<h4>- Integrate All extensions (recommended):</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift'</code></pre>
-
-<h4>- Integrate SwiftStdlib extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/SwiftStdlib'</code></pre>
-
-<h4>- Integrate Foundation extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/Foundation'</code></pre>
-
-<h4>- Integrate UIKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/UIKit'</code></pre>
-
-<h4>- Integrate AppKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/AppKit'</code></pre>
-
-<h4>- Integrate MapKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/MapKit'</code></pre>
-
-<h4>- Integrate CoreGraphics extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/CoreGraphics'</code></pre>
-
-<h4>- Integrate CoreLocation extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/CoreLocation'</code></pre>
-
-<h4>- Integrate SpriteKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/SpriteKit'</code></pre>
-
-<h4>- Integrate SceneKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/SceneKit'</code></pre>
-
-<h4>- Integrate StoreKit extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/StoreKit'</code></pre>
-
-<h4>- Integrate Dispatch extensions only:</h4>
-<pre><code class="ruby language-ruby">pod 'SwifterSwift/Dispatch'</code></pre>
-</details>
-
-<details>
-<summary>Carthage</summary>
-</br>
-<p>To integrate SwifterSwift into your Xcode project using <a href="https://github.com/Carthage/Carthage">Carthage</a>, specify it in your <code>Cartfile</code>:</p>
-
-<pre><code class="ogdl language-ogdl">github "SwifterSwift/SwifterSwift" ~&gt; 5.2
-</code></pre>
-</details>
-
-<details>
-<summary>Swift Package Manager</summary>
-</br>
-<p>You can use <a href="https://swift.org/package-manager">The Swift Package Manager</a> to install <code>SwifterSwift</code> by adding the proper description to your <code>Package.swift</code> file:</p>
-
-<pre><code class="swift language-swift">import PackageDescription
-
-let package = Package(
-    name: "YOUR_PROJECT_NAME",
-    targets: [],
-    dependencies: [
-        .package(url: "https://github.com/SwifterSwift/SwifterSwift.git", from: "5.2.0")
-    ]
-)
-</code></pre>
-
-<p>Next, add <code>SwifterSwift</code> to your targets dependencies like so:</p>
-<pre><code class="swift language-swift">.target(
-    name: "YOUR_TARGET_NAME",
-    dependencies: [
-        "SwifterSwift",
-    ]
-),</code></pre>
-<p>Then run <code>swift package update</code>.</p>
-
-<p>Note that the <a href="https://swift.org/package-manager">Swift Package Manager</a> doesn't support building for iOS/tvOS/macOS/watchOS apps – see Accio in the next section for that.
+```bash
+echo $JAVA_HOME
+```
+Should see
+```
+/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
+```
+If you see it, you can skip the two steps below. <br>
 </details>
 
 
+<!-- Ensure Java version is downloaded -->
 <details>
-<summary>Accio</summary>
-<p><a href="https://github.com/JamitLabs/Accio">Accio</a> is a dependency manager based on SwiftPM which can build frameworks for iOS/macOS/tvOS/watchOS. Therefore the integration steps are exactly the same as described above. Once your <code>Package.swift</code> file is configured, you need to run <code>accio update</code> instead of <code>swift package update</code> though.</p>
+<summary>2. Java version is downloaded</summary>
+
+```bash
+/usr/libexec/java_home -V
+```
+Should see installed JDKs:
+```
+17.0.1 (x86_64) "Oracle Corporation" - "Java SE 17.0.1" /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+16.0.1 (x86_64) "Oracle Corporation" - "OpenJDK 16.0.1" /Users/user/Library/Java/JavaVirtualMachines/openjdk-16.0.1/Contents/Home
+11.0.13 (x86_64) "Oracle Corporation" - "Java SE 11.0.13" /Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
+...
+```
+If not found, have not downloaded the JDK properly.<br>
 </details>
 
-
+<!-- Ensure correct JDK v11 is showing -->
 <details>
-<summary>Manually</summary>
-</br>
-<p>Add the <a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift">SwifterSwift</a> folder to your Xcode project to use all extensions, or a specific extension.</p>
+<summary>3. Correct JDK v11 is showing</summary>
+
+```bash
+/usr/libexec/java_home -v 11
+```
+Should see
+```
+/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
+```
+If you see a non-Oracle JDK, like open JDK, you need to uninstall it first. <br>
 </details>
 
-## List of All Extensions
-
+<!-- Set Java Home variable -->
 <details>
-<summary>SwiftStdlib Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/ArrayExtensions.swift"><code>Array extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift"><code>BidirectionalCollection extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/BinaryFloatingPointExtensions.swift"><code>BinaryFloatingPoint extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/BoolExtensions.swift"><code>Bool extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/CharacterExtensions.swift"><code>Character extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/CollectionExtensions.swift"><code>Collection extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/ComparableExtensions.swift"><code>Comparable extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/DictionaryExtensions.swift"><code>Dictionary extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/DoubleExtensions.swift"><code>Double extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/FloatExtensions.swift"><code>Float extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/FloatingPointExtensions.swift"><code>FloatingPoint extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift"><code>Int extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/OptionalExtensions.swift"><code>Optional extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift"><code>RandomAccessCollection extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift"><code>RangeReplaceableCollection extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/SequenceExtensions.swift"><code>Sequence extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/SignedIntegerExtensions.swift"><code>SignedInteger extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/SignedNumericExtensions.swift"><code>SignedNumeric extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/SwiftStdlib/StringExtensions.swift"><code>String extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SwiftStdlib/StringProtocolExtensions.swift"><code>StringProtocol extensions</code></a></li>
-</ul>
+<summary>4. Set Java Home variable</summary>
+
+Find out what shell version you're using:
+```bash
+echo $SHELL
+```
+If you're using [ZSH](https://ohmyz.sh): you ought to be updating `~/.zshrc` else `~/.bash_profile` for the following steps. <br>
+
+Update your profile:
+```bash
+[emacs/vim/atom] ~/.zshrc
+```
+Add the following line:
+```bash
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+```
+Update shell profile
+```bash
+source ~/.zshrc
+```
 </details>
+</details> <!-- end Java -->
 
-
+<!-- Enable Mac Developer Tools -->
 <details>
-<summary>Foundation Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/CalendarExtensions.swift"><code>Calendar extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/DataExtensions.swift"><code>Data extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/DateExtensions.swift"><code>Date extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/Foundation/FileManagerExtensions.swift"><code>FileManager extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/LocaleExtensions.swift"><code>Locale extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/NSAttributedStringExtensions.swift"><code>NSAttributedString extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/NSPredicateExtensions.swift"><code>NSPredicate extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/URLExtensions.swift"><code>URL extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/URLRequestExtensions.swift"><code>URLRequest extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Foundation/UserDefaultsExtensions.swift"><code>UserDefaults extensions</code></a></li>
-</ul>
-</details>
-
-
-<details>
-<summary>UIKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIActivityExtensions.swift"><code>UIActivity extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIAlertControllerExtensions.swift"><code>UIAlertController extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIApplicationExtensions.swift"><code>UIApplication extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIBarButtonItemExtensions.swift"><code>UIBarButtonItem extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIButtonExtensions.swift"><code>UIButton extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UICollectionViewExtensions.swift"><code>UICollectionView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Shared/ColorExtensions.swift"><code>UIColor extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIDatePickerExtensions.swift"><code>UIDatePicker extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIEdgeInsetsExtensions.swift"><code>UIEdgeInsets extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIFontExtensions.swift"><code>UIFont extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIGestureRecognizer.swift"><code>UIGestureRecognizer extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIImageExtensions.swift"><code>UIImage extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIImageViewExtensions.swift"><code>UIImageView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UILabelExtensions.swift"><code>UILabel extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UILayoutPriorityExtensions.swift"><code>UILayoutPriority extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UINavigationBarExtensions.swift"><code>UINavigationBar extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UINavigationControllerExtensions.swift"><code>UINavigationController extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UINavigationItemExtensions.swift"><code>UINavigationItem extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIRefreshControlExtensions.swift"><code>UIRefreshControl extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIScrollViewExtensions.swift"><code>UIScrollView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UISearchBarExtensions.swift"><code>UISearchBar extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UISegmentedControlExtensions.swift"><code>UISegmentedControl extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UISliderExtensions.swift"><code>UISlider extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift"><code>UIStackView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIStoryboardExtensions.swift"><code>UIStoryboard extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UISwitchExtensions.swift"><code>UISwitch extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UITabBarExtensions.swift"><code>UITabBar extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UITableViewExtensions.swift"><code>UITableView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UITextFieldExtensions.swift"><code>UITextField extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UITextViewExtensions.swift"><code>UITextView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIViewControllerExtensions.swift"><code>UIViewController extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIViewExtensions.swift"><code>UIView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/UIKit/UIWindowExtensions.swift"><code>UIWindow extensions</code></a></li>
-</ul>
-</details>
+<summary>Mac Developer Tools</summary>
 
 
 <details>
-<summary>AppKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/Shared/ColorExtensions.swift"><code>NSColor extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/AppKit/NSViewExtensions.swift"><code>NSView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/AppKit/NSImageExtensions.swift"><code>NSImage extensions</code></a></li>
-</ul>
+<summary>1. Install Mac dev tools</summary>
+
+Install Mac dev tools:
+```bash
+xcode-select --install
+```
+Accept dev tools agreement:
+```bash
+sudo xcodebuild -license
+```
 </details>
 
 <details>
-<summary>CoreGraphics Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGColorExtensions.swift"><code>CGColor extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGFloatExtensions.swift"><code>CGFloat extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGPointExtensions.swift"><code>CGPoint extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGSizeExtensions.swift"><code>CGSize extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGRectExtensions.swift"><code>CGRect extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreGraphics/CGVectorExtensions.swift"><code>CGVector extensions</code></a></li>
-</ul>
+<summary>2. Enable command line tools</summary>
+
+`Xcode -> Preferences -> Locations -> Command Line Tools -> [Select latest]`
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/xcode-1.png?raw=true" alt="" data-canonical-src="" />
+</p>
+
+If you don't do this, on builds you may see the following errors:
+```bash
+Kotlin/Native: KonanExternalToolFailure "The /usr/bin/xcrun command returned non-zero exit code: 72"
+```
+```bash
+xcrun: error: unable to find utility "xcodebuild", not a developer tool or in PATH
+```
+</details>
+</details> <!-- end enable mac dev tools -->
+
+<!-- Android Studio -->
+<details>
+<summary>Android Studio</summary>
+
+<details>
+<summary>1. Android Studio Install</summary>
+
+When installing Android Studio, choose custom:<br>
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-1.png?raw=true" alt="" data-canonical-src=""/>
+</p>
+Insert custom directory for Android SDK:<br>
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-2.png?raw=true" alt="" data-canonical-src=""/>
+</p>
 </details>
 
 <details>
-<summary>CoreLocation Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreLocation/CLLocationExtensions.swift"><code>CLLocation extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreLocation/CLVisitExtensions.swift"><code>CLVisit extensions</code></a></li>
-</ul>
+<summary>2. Set Android shell variables</summary>
+
+After installation flow, set `ANDROID_HOME` & `ADB` variables in shell:
+```bash
+export ANDROID_HOME="/Applications/AndroidSDK/"
+export adb="/Applications/AndroidSDK/platform-tools/adb"
+export ADB="/Applications/AndroidSDK/platform-tools/adb"
+```
 </details>
 
 <details>
-<summary>CoreAnimation Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/tree/master/Sources/SwifterSwift/CoreAnimation/CAGradientLayerExtensions.swift"><code>CAGradientLayer extensions</code></a></li>
-</ul>
+<summary>3. Create an Android Emulator</summary>
+
+* Open the Android Virtual Device (AVD) Manager: `Tools -> AVD Manager` <br>
+* Select **+ Create New Virtual Device...**. <br>
+* From the large devices list, select latest Pixel, i.e. Pixel 3 XL. <br>
+* Next you need to select an image: Select newest API level/x86_64/Google Play <br>
+* Last step, select `Advanced -> Graphics -> Hardware`
+</details>
+</details> <!-- end Android -->
+
+<!-- Cocoapods -->
+<details>
+<summary>Cocoapods</summary>
+
+<details>
+<summary>1. Ensure correct Ruby version</summary>
+
+Ensure Ruby v2.6 is installed. Note: does not work on v3+.
+```bash
+ruby -v
+```
 </details>
 
 <details>
-<summary>MapKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/MapKit/MKMapViewExtensions.swift"><code>MKMapView extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/MapKit/MKPolylineExtensions.swift"><code>MKPolyline extensions</code></a></li>
-</ul>
+<summary>2. Install cocoapods</summary>
+
+```bash
+sudo gem install cocoapods -v 1.8.4
+```
 </details>
 
 <details>
-<summary>SpriteKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SpriteKit/SKNodeExtensions.swift"><code>SKNode extensions</code></a></li>
-</ul>
+<summary>3. Error</summary>
+
+If you have installation issues, check [here](https://stackoverflow.com/questions/60481623/errors-when-installing-cocoapods-with-gem) for solutions.
+</details>
+</details> <!-- end Cocoapods -->
+
+<!-- Build Android -->
+<details>
+<summary>Build Android</summary>
+
+<details>
+<summary>1. Open project in Android Studio</summary>
+
+Open the project in Android Studio. <br>
+Wait for indexing to finish. <br>
+Make sure you see the run config for the app:
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-3.png?raw=true" alt="" data-canonical-src=""/>
+</p>
+Run the Android app on either emulator or phone.<br>
 </details>
 
 <details>
-<summary>SceneKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNBoxExtensions.swift"><code>SCNBox extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNCone.swift"><code>SCNCone extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNCapsule.swift"><code>SCNCapsule extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNCylinderExtensions.swift"><code>SCNCylinder extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNGeometryExtensions.swift"><code>SCNGeometry extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNMaterialExtensions.swift"><code>SCNMaterial extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNPlaneExtensions.swift"><code>SCNPlane extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNShape.swift"><code>SCNShape extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNSphereExtensions.swift"><code>SCNSphere extensions</code></a></li>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/SceneKit/SCNVector3Extensions.swift"><code>SCNVector3 extensions</code></a></li>
-</ul>
-</details>
+<summary>2. Error: Android Gradle requires Java 11 to run</summary>
+
+If you see following error:
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-4.png?raw=true" alt="" data-canonical-src=""/>
+</p>
+
+Go to `Preferences -> Build, Execution, Deployment -> Build Tools -> Gradle -> Select Gradle JDK`
+<p align="center">
+<img src="https://github.com/whether-jacket/weather-app-2022-kmm/raw/main/docs/android-studio-5.png?raw=true" alt="" data-canonical-src=""/>
+</p>  
+</details>  
 
 <details>
-<summary>StoreKit Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/StoreKit/SKProductExtensions.swift"><code>SKProduct extensions</code></a></li>
-</ul>
-</details>
+<summary>3. Error: SDK location not found</summary>
 
+If you see the following error:
+```bash
+SDK location not found. Define location with an ANDROID_SDK_ROOT environment variable or by setting up the sdk.dir path in your project's local properties file...
+```
+Project does not know the location of your local Android SDK. <br>
+Open `local.properties`<br>
+```bash
+sdk.dir=[ANDROID_SDK_ROOT location as used during installation]
+```
+</details>
 <details>
-<summary>Dispatch Extensions</summary>
-</br>
-<ul>
-<li><a href="https://github.com/SwifterSwift/SwifterSwift/blob/master/Sources/SwifterSwift/Dispatch/DispatchQueueExtensions.swift"><code>DispatchQueue extensions</code></a></li>
-</ul>
+<summary>4. Gradle Sync Fail: 'pod install' fail</summary>
+If you see the following error:
+```bash
+Please, check that file "../iosApp/Podfile" contains following lines in header: source 'https://cdn.cocoapods.org'
+```
+Open `ios` directory. <br>
+```bash
+sudo gem install cocoapods
+```
+After successful pod generation close the terminal. <br>
+```bash
+sudo gem install cocoapods-generate
+```
+Close and reopen the terminal again <br>
+Edit `~/.zshrc`& add the following: <br>
+```bash
+export LANG=en_US.UTF-8
+```
+`source ~/.zshrc` or quit & reopen terminal <br>
+Source: https://stackoverflow.com/questions/69805554/kmm-project-setup-with-cocoapods-fails-on-first-compile
 </details>
-
-## How cool is this?
-
-SwifterSwift is a library of **over 500 properties and methods**, designed to extend Swift's functionality and productivity, staying faithful to the original Swift API design guidelines.
-
-Check Examples.playground from the project for some cool examples!
-
-## Documentation
-
-Documentation for all extensions, with examples, is available at [swifterswift.com/docs](http://swifterswift.com/docs)
-
-## Get involved
-
-We want your feedback.
-Please refer to [contributing guidelines](https://github.com/SwifterSwift/SwifterSwift/tree/master/CONTRIBUTING.md) before participating.
-
-## Slack Channel: [![Slack](https://slackin-ppvrggbpgn.now.sh/badge.svg)](https://slackin-ppvrggbpgn.now.sh/)
-
-It is always nice to talk with other people using SwifterSwift and exchange experiences, so come [join our Slack channel](https://slackin-ppvrggbpgn.now.sh/).
-
-## Thanks
-
-Special thanks to:
-
-- [Steven Deutsch](https://github.com/SD10), [Luciano Almeida](https://github.com/LucianoPAlmeida) and [Guy Kogus](https://github.com/guykogus) for their latest contributions to extensions, docs and tests.
-- [Paweł Urbanek](https://github.com/pawurb) for adding tvOS, watchOS, and macOS initial support and helping with extensions.
-- [Mert Akengin](https://github.com/pvtmert) and [Bashar Ghadanfar](https://www.behance.net/lionbytes) for designing [project website](http://swifterswift.com) and logo.
-- [Abdul Rahman Dabbour](https://github.com/ardabbour) for helping document the project.
-- Many thanks to all other [contributors](https://github.com/SwifterSwift/SwifterSwift/graphs/contributors) of this project.
-
-## License
-
-SwifterSwift is released under the MIT license. See [LICENSE](https://github.com/SwifterSwift/SwifterSwift/blob/master/LICENSE) for more information.
+</details>
+<!-- end Android -->
+<!-- Build iOS -->
+<details>
+<summary>Build iOS</summary>
+<details>
+<summary>1. Gradle Build</summary>
+Go to project folder:
+```bash
+cd weather-app-2022-kmm
+```
+Run gralde build:
+```bash
+./gradlew build
+```
+Open Xcode **workspace** project in the `ios/` folder: `KaMPKitiOS.xcworkspace`. <br>
+Run the iOS app on Simulator. <br>
+</details>
+<details>
+<summary>2. Error: No such module</summary>
+If you get the following compilation error:
+```bash
+no such module: 'shared'
+```
+Close Xcode. <br>
+Delete `Pods/` folder located in the root directory of the iOS project.<br>
+Run the command `pod install` in that same iOS root directory (which is `/weather-app-2022-kmm/ios/` to be specific).<br>
+This will generate a new `Pods` folder. Reopen the `.xcworkspace` file and try to build again.
+</details>
+<details>
+<summary>3. Error: Framework not found</summary>
+If you see the following error:<br>
+```bash
+Framework not found shared_umbrella
+```
+You probably opened the `.xcodeproj` file instead of the `.xcworkspace`. <br>
+Close out the `.xcodeproj` and open the `.xcworkspace` and run again.
+</details>
+</details> <!-- end iOS -->
