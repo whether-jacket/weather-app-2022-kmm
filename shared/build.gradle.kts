@@ -1,11 +1,9 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    kotlin("kapt")
     id("kotlinx-serialization")
     id("com.android.library")
     id("com.squareup.sqldelight")
-    id("org.orbit-mvi.orbit.swift") version "0.1.0" // https://github.com/orbit-mvi/orbit-swift-gradle-plugin
 }
 
 android {
@@ -15,15 +13,18 @@ android {
         targetSdk = libs.versions.targetSdk.get().toInt()
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
     lint {
         isWarningsAsErrors = false
         isAbortOnError = false
     }
 }
 
-version = "1.0"
-// dependencies {}
+version = "1.2"
 
 android {
     configurations {
@@ -42,8 +43,6 @@ kotlin {
     // Note: iosSimulatorArm64 target requires that all dependencies have M1 support
     iosSimulatorArm64()
 
-    version = "1.1"
-
     sourceSets {
         all {
             languageSettings.apply {
@@ -56,9 +55,6 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api(libs.touchlab.kermit)
-                api(libs.orbit.mvi.core)
-                api(libs.icerock.moko.mvvm.core)
                 implementation(libs.koin.core)
                 implementation(libs.coroutines.core)
                 implementation(libs.sqlDelight.coroutinesExt)
@@ -66,6 +62,10 @@ kotlin {
                 implementation(libs.touchlab.stately)
                 implementation(libs.multiplatformSettings.common)
                 implementation(libs.kotlinx.dateTime)
+                api(libs.touchlab.kermit)
+                api(libs.ballast.core)
+                api(libs.ballast.repository)
+                implementation(libs.ballast.savedstate)
             }
         }
         val commonTest by getting {
@@ -75,11 +75,11 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                implementation(libs.androidx.lifecycle.viewmodel)
                 implementation(libs.sqlDelight.android)
                 implementation(libs.ktor.client.okHttp)
-                implementation(libs.androidx.lifecycle.viewmodel)
-                implementation(libs.orbit.mvi.viewmodel)
-                implementation(libs.koin.android)
+                api(libs.koin.android)
+                implementation(libs.ballast.debugger)
             }
         }
         val androidTest by getting {
@@ -94,7 +94,7 @@ kotlin {
                 val coroutineCore = libs.coroutines.core.get()
                 implementation("${coroutineCore.module.group}:${coroutineCore.module.name}:${coroutineCore.versionConstraint.displayName}") {
                     version {
-                        strictly(libs.versions.coroutines.native.get())
+                        strictly(libs.versions.coroutines.get())
                     }
                 }
             }
@@ -118,6 +118,8 @@ kotlin {
         homepage = "https://github.com/touchlab/KaMPKit"
         framework {
             isStatic = false // SwiftUI preview requires dynamic framework
+            export(libs.ballast.core)
+            export(libs.ballast.repository)
         }
         ios.deploymentTarget = "12.4"
         podfile = project.file("../ios/Podfile")

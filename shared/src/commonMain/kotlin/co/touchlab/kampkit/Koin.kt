@@ -1,16 +1,25 @@
 package co.touchlab.kampkit
 
-import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApi
-import co.touchlab.kampkit.metaweather.ktor.MetaWeatherApiImpl
-import co.touchlab.kampkit.metaweather.repo.WeatherRepo
-import co.touchlab.kampkit.metaweather.repo.WeatherUseCase
+import co.touchlab.kampkit.openweather.ktor.OpenWeatherApi
+import co.touchlab.kampkit.openweather.ktor.OpenWeatherApiImpl
+import co.touchlab.kampkit.openweather.repo.WeatherRepo
+import co.touchlab.kampkit.openweather.repo.WeatherReportRepository
+import co.touchlab.kampkit.openweather.repo.WeatherUseCase
+import co.touchlab.kampkit.openweather.viewmodel.WeatherReportContract
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.StaticConfig
 import co.touchlab.kermit.platformLogWriter
+import com.copperleaf.ballast.BallastLogger
+import com.copperleaf.ballast.BallastViewModelConfiguration
+import com.copperleaf.ballast.core.LoggingInterceptor
+import com.copperleaf.ballast.plusAssign
+import com.copperleaf.ballast.repository.bus.EventBus
+import com.copperleaf.ballast.repository.bus.EventBusImpl
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.datetime.Clock
 import org.koin.core.KoinApplication
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
 import org.koin.core.parameter.parametersOf
@@ -18,7 +27,6 @@ import org.koin.core.scope.Scope
 import org.koin.dsl.module
 
 fun initKoin(appModule: Module): KoinApplication {
-
     val koinApplication = startKoin {
         modules(
             appModule,
@@ -42,29 +50,47 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
-    single<MetaWeatherApi> {
-        MetaWeatherApiImpl()
-    }
     single<Clock> {
         Clock.System
     }
-    factory<WeatherRepo> { WeatherRepo() }
-    factory<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
 
     // platformLogWriter() is a relatively simple config option, useful for local debugging. For production
     // uses you *may* want to have a more robust configuration from the native platform. In KaMP Kit,
     // that would likely go into platformModule expect/actual.
     // See https://github.com/touchlab/Kermit
-    val baseLogger =
-        Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
+    val baseLogger = Logger(config = StaticConfig(logWriterList = listOf(platformLogWriter())), "KampKit")
     factory { (tag: String?) -> if (tag != null) baseLogger.withTag(tag) else baseLogger }
+
+    single<OpenWeatherApi> {
+        OpenWeatherApiImpl()
+    }
+    factory<WeatherRepo> { WeatherRepo() }
+    factory<BallastViewModelConfiguration.Builder> {
+        BallastViewModelConfiguration.Builder()
+            .apply {
+                logger = { tag -> KermitBallastLogger(getWith(tag)) }
+                this += LoggingInterceptor()
+                initialState = WeatherReportContract.ViewState()
+            }
+    }
+    factory<CoroutineScope> {
+        CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    }
+    single<EventBus> {
+        EventBusImpl()
+    }
+    single<WeatherUseCase> { WeatherUseCase(get<WeatherRepo>()) }
+    single <WeatherReportRepository>{ WeatherReportRepository(get(), get(), get(), get())  }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
     return get(parameters = { parametersOf(*params) })
 }
 
-// Simple function to clean up the syntax a bit
-fun KoinComponent.injectLogger(tag: String): Lazy<Logger> = inject { parametersOf(tag) }
-
 expect val platformModule: Module
+
+class KermitBallastLogger(val log: Logger) : BallastLogger {
+    override fun debug(message: String) { log.d(message) }
+    override fun info(message: String) { log.i(message) }
+    override fun error(throwable: Throwable) { log.e(throwable) { "" } }
+}
