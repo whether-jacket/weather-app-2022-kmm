@@ -41,17 +41,16 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.get()
+        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 }
 
 dependencies {
     implementation(project(":shared"))
     implementation(libs.bundles.app.ui)
-    coreLibraryDesugaring(libs.android.desugaring)
-    implementation(libs.koin.android)
-    testImplementation(libs.junit)
+    implementation(libs.multiplatformSettings.common)
+    implementation(libs.kotlinx.dateTime)
     implementation(libs.compose.navigation)
-    implementation(libs.orbit.mvi.viewmodel)
-    implementation(libs.orbit.mvi.core)
+    coreLibraryDesugaring(libs.android.desugaring)
+    testImplementation(libs.junit)
 }
