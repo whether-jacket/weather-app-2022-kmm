@@ -13,7 +13,7 @@ koin = "3.1.5"
 kotlin = "1.6.10"
 ktor = "2.0.0-beta-1"
 lifecycle = "2.4.1"
-sqlDelight = "1.5.3"
+sqlDelight = "1.5.5"
 ballast = "1.0.0"
 
 [libraries]
