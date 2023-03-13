@@ -80,7 +80,7 @@ ballast-savedstate = { module = "io.github.copper-leaf:ballast-saved-state", ver
 ballast-debugger = { module = "io.github.copper-leaf:ballast-debugger", version.ref = "ballast" }
 
 [plugins]
-gradleDependencyUpdate = "com.github.ben-manes.versions:0.42.0"
+gradleDependencyUpdate = "com.github.ben-manes.versions:0.46.0"
 
 [bundles]
 app-ui = [
